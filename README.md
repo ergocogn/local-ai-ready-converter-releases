@@ -22,7 +22,7 @@ A PDF invoice, a scanned letter, a Word report and an Excel workbook were made p
 
 In practical terms, this is a **local document converter for PDF OCR, PDF to text/Markdown/JSON, DOCX to Markdown, XLSX to CSV/JSON, and image OCR**. It brings these jobs together in one graphical batch workflow.
 
-No Python, Pandoc or Tesseract installation is required separately for the intended Windows package. You do not need an account or a command line to use the application. Conversion runs on your computer; document contents are not sent to an ergoCogn conversion service.
+No Python or Tesseract installation is required separately for the intended Windows package. You do not need an account or a command line to use the application. Conversion runs on your computer; document contents are not sent to an ergoCogn conversion service.
 
 ## See it in action
 
@@ -41,7 +41,7 @@ This app prepares documents; **it does not include a generative AI model, semant
 
 ## Proven tools, one visual workflow
 
-This is not a replacement for every underlying converter. The app brings established tools together, handles files and destinations, runs batch jobs and presents the outputs without requiring the user to operate each tool separately. **Pandoc** handles DOCX conversion; **Tesseract** and **OCRmyPDF** provide OCR and searchable PDFs; **pypdf** extracts text from text PDFs; **openpyxl** reads Excel workbooks. The Windows interface uses **pywebview and Microsoft WebView2**. These components keep their own licences and conditions: see the [third-party component summary](docs/COMPOSANTS_TIERS.en.md).
+This is not a replacement for every underlying converter. The app brings established tools together, handles files and destinations, runs batch jobs and presents the outputs without requiring the user to operate each tool separately. **python-docx** extracts DOCX text and structure; **Tesseract** and **OCRmyPDF** provide OCR and searchable PDFs; **pypdf** extracts text from text PDFs; **openpyxl** reads Excel workbooks. The Windows interface uses **pywebview and Microsoft WebView2**. These components keep their own licences and conditions: see the [third-party component summary](docs/COMPOSANTS_TIERS.en.md).
 
 ## Download and availability
 

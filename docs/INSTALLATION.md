@@ -9,7 +9,7 @@
 3. Lancez le setup et suivez l'assistant. L'installation se fait pour votre compte Windows.
 4. Ouvrez **Local AI-Ready Converter** depuis le menu Démarrer ou à la dernière étape du setup.
 
-Ne téléchargez pas un fichier portant `.incomplete` ou `.part`. Les outils de conversion et les langues OCR de base sont inclus : pas besoin d'installer séparément Python, Pandoc ou Tesseract sur le poste utilisateur. L'application n'exige aucune ligne de commande.
+Ne téléchargez pas un fichier portant `.incomplete` ou `.part`. Les outils de conversion et les langues OCR de base sont inclus : pas besoin d'installer séparément Python ou Tesseract sur le poste utilisateur. L'application n'exige aucune ligne de commande.
 
 ## Mise à jour
 

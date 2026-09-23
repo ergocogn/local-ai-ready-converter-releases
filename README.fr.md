@@ -22,7 +22,7 @@ Une facture PDF, une lettre numérisée, un rapport Word ou un classeur Excel on
 
 Concrètement, c'est un **convertisseur local de documents : OCR des PDF et des images, PDF vers texte/Markdown/JSON, DOCX vers Markdown, XLSX vers CSV/JSON**. L'application rassemble ces opérations dans un parcours graphique de conversion par lot.
 
-Le paquet Windows visé n'exige pas l'installation séparée de Python, Pandoc ou Tesseract. Pas besoin de compte ni de ligne de commande pour utiliser l'application. La conversion se fait sur votre ordinateur ; le contenu des documents n'est pas envoyé à un service de conversion ergoCogn.
+Le paquet Windows visé n'exige pas l'installation séparée de Python ou Tesseract. Pas besoin de compte ni de ligne de commande pour utiliser l'application. La conversion se fait sur votre ordinateur ; le contenu des documents n'est pas envoyé à un service de conversion ergoCogn.
 
 ## Découvrez l'interface
 
@@ -41,7 +41,7 @@ L'application **prépare les documents** : elle n'embarque aujourd'hui ni modèl
 
 ## Des outils éprouvés, un seul parcours visuel
 
-L'application ne prétend pas remplacer tous les convertisseurs sous-jacents. Elle les rassemble, gère les fichiers et les destinations, lance les lots et présente les résultats sans demander à chacun de manipuler ces outils séparément. **Pandoc** convertit les DOCX ; **Tesseract** et **OCRmyPDF** assurent l'OCR et les PDF recherchables ; **pypdf** extrait le texte des PDF textuels ; **openpyxl** lit les classeurs Excel. L'interface Windows utilise **pywebview et Microsoft WebView2**. Chaque composant conserve sa licence et ses conditions : voir les [composants tiers](docs/COMPOSANTS_TIERS.md).
+L'application ne prétend pas remplacer tous les convertisseurs sous-jacents. Elle les rassemble, gère les fichiers et les destinations, lance les lots et présente les résultats sans demander à chacun de manipuler ces outils séparément. **python-docx** extrait le texte et la structure des DOCX ; **Tesseract** et **OCRmyPDF** assurent l'OCR et les PDF recherchables ; **pypdf** extrait le texte des PDF textuels ; **openpyxl** lit les classeurs Excel. L'interface Windows utilise **pywebview et Microsoft WebView2**. Chaque composant conserve sa licence et ses conditions : voir les [composants tiers](docs/COMPOSANTS_TIERS.md).
 
 ## Téléchargement et disponibilité
 
