@@ -1,5 +1,7 @@
 # Local AI-Ready Converter — licence propriétaire / freeware
 
+[English translation](LICENSE.en.md) · [Accueil](README.fr.md)
+
 > Texte de travail pour la préparation privée de la distribution. Validation juridique et conformité des composants tiers requises avant toute publication.
 
 Éditeur : ergoCogn sàrl.

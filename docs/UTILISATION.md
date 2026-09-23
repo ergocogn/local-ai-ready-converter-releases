@@ -1,5 +1,7 @@
 # Guide d'utilisation
 
+[Read in English](UTILISATION.en.md) · [Accueil](../README.fr.md)
+
 ## Convertir
 
 Glissez des fichiers ou dossiers dans la zone d'importation, ou utilisez les boutons d'ajout. La colonne **Fichiers à convertir** montre les dossiers et les fichiers ; vous pouvez filtrer par type, cocher les fichiers à traiter et retirer une ligne de la liste sans supprimer l'original.

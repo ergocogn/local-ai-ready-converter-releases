@@ -1,5 +1,7 @@
 # Composants tiers
 
+[Read in English](COMPOSANTS_TIERS.en.md) · [Accueil](../README.fr.md)
+
 Local AI-Ready Converter est distribué sous une licence propriétaire/freeware pour son code original. Les logiciels libres et le runtime Microsoft intégrés restent soumis à **leurs propres licences**. La licence du produit ne limite pas les droits que celles-ci vous donnent.
 
 | Composant | Utilisation | Licence ou conditions principales |

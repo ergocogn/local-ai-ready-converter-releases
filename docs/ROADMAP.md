@@ -1,9 +1,44 @@
 # Feuille de route
 
-La priorité est de terminer et valider la distribution **Windows 11 x64** : installation propre, mise à niveau, désinstallation, fonctionnement sans outils préinstallés, notices et droits de redistribution. Les tests internes du paquet ne remplacent pas cette recette.
+[Read in English](ROADMAP.en.md) · [Accueil](../README.fr.md)
 
-Ensuite, nous visons des paquets **Linux**, puis **macOS**, en conservant autant que possible le même moteur de conversion. Les dépendances natives, le rendu de la fenêtre et les installateurs devront être testés séparément pour chaque système. Aucune date de livraison n'est annoncée.
+**État, pas promesse de date.** Les numéros 0.1, 0.2 et 0.3 sont des jalons de développement ; ils ne signifient pas qu'une Release publique de chacun existe. Le dépôt de distribution est encore privé et aucun installateur public 0.3.1 n'a été publié.
 
-Des améliorations fonctionnelles pourront suivre : meilleure restitution des tableaux et PDF complexes, sorties tabulaires compactes pour les IA, options OCR et diagnostics plus guidés.
+```mermaid
+flowchart TB
+  A["0.1–0.2<br/>moteur local · OCR · batch"] --> B["0.3.1 candidate<br/>interface · assistant · formats par fichier"]
+  B --> C["Validation Windows<br/>licences · machine propre · paquet exact"]
+  C --> D["Release Windows<br/>setup · notices · empreintes"]
+  D --> U["Mise à jour réelle<br/>détection GitHub · téléchargement · mise à niveau"]
 
-À plus long terme, le projet pourra progresser par étapes vers une structure de dossier AI-ready et un manifest documenté, puis une interopérabilité locale (API ou MCP), le découpage en passages, un index local, la recherche sémantique et enfin le RAG local. Ces fonctions **ne sont pas présentes** dans la version actuelle et ne seront pas ajoutées toutes ensemble.
+  D --> L["Linux<br/>outils natifs · build · tests"] --> M["macOS<br/>outils natifs · build · tests"]
+  D --> Q["Qualité des sorties<br/>PDF/tableaux · erreurs · choix automatique éventuel"]
+  Q --> F["Dossier AI-ready<br/>ID · manifest · métadonnées · assets"]
+  F --> P["Interopérabilité locale<br/>API/MCP · droits d'accès · réutilisation"]
+  P --> K["Recherche locale<br/>chunks · embeddings · index"] --> R["RAG local<br/>passages sourcés · réponses"]
+
+  classDef fait fill:#e9f5ef,stroke:#287451,color:#173f2e
+  classDef enCours fill:#fff4dd,stroke:#a56b00,color:#553600
+  classDef futur fill:#f6f6f6,stroke:#666,color:#222
+  class A,B fait
+  class C enCours
+  class D,U,L,M,Q,F,P,K,R futur
+```
+
+**Vert :** fonctions et essais existants, pas encore de publication publique. **Ambre :** validation en cours. **Gris :** non publié ou non réalisé. Après Windows, le portage et l'évolution fonctionnelle sont deux branches indépendantes : AI-ready/RAG ne doivent pas retarder Linux et macOS.
+
+| Étape | État réel | Pour la considérer terminée |
+| --- | --- | --- |
+| **0.1–0.2 — fondation** | Moteur de conversion, OCR, batch, interface et premiers choix de destination réalisés en développement. | Jalon historique, pas une offre publique actuelle. |
+| **0.3 / 0.3.1 — candidate Windows** | Interface, assistant, formats par fichier, historique de session, liens configurables, installateur de test et mise à niveau essayée sur le PC de l'éditeur. Tests automatisés et conversions de démonstration exécutés. | Encore une recette sur Windows propre sans outils préinstallés, une revue des licences/notice tierces et la validation du paquet exact. |
+| **Première Release Windows** | Pas publiée. Dépôt de distribution séparé et privé, sans code propriétaire. | Publier seulement après validation : installateur, notes bilingues, notices et sources tierces requises, empreintes. Configurer le dépôt public de distribution sans rendre le développement public. |
+| **Vérification des mises à jour** | Comparaison de versions, dialogue et téléchargement vérifié testés avec réponses GitHub simulées ; pas encore d'essai avec une Release publique réelle. | Depuis une version antérieure, détecter la Release publique, télécharger le setup correspondant, vérifier taille et SHA-256, l'ouvrir dans l'Explorateur, puis effectuer une mise à niveau manuelle. Tester aussi « déjà à jour » et réseau indisponible. |
+| **Linux** | Moteur Python largement réutilisable ; aucun paquet Linux validé. | Construire sur Linux avec dépendances intégrées, interface pywebview adaptée, conversions/OCR et paquet installable testés sur système propre. Vérifier les liens de téléchargement et la stratégie de mise à jour Linux. |
+| **macOS** | Aucun paquet macOS validé. | Construire sur macOS avec outils compatibles, signature/notarisation si nécessaires au mode de distribution retenu, interface et conversions/OCR testées sur machine propre. Vérifier sa méthode de mise à jour. |
+| **Qualité / futur cycle 0.4** | Envisagé, non promis pour la première Release. | Mieux guider les erreurs, améliorer tableaux/PDF complexes et JSON tabulaire compact, expliciter un éventuel mode de choix automatique des sorties, puis tester chaque règle. |
+| **Structure AI-ready** | Pas encore implémentée. | Dossier stable, identifiant de document, manifest JSON versionné, provenance, sorties produites, OCR/langue, format source et organisation des assets. |
+| **Interopérabilité locale** | Pas encore implémentée. | API et/ou MCP activés explicitement pour lister les documents, récupérer TXT/Markdown/JSON et connaître les conversions déjà faites, sans OCR répété. Permissions et aucun partage réseau par défaut. |
+| **Recherche locale** | Pas encore implémentée. | Découpage en passages avec références de source, embeddings et index locaux, recherche sémantique testée sur un corpus. |
+| **RAG local** | Pas encore implémenté. | Questions sur les documents avec passages pertinents retrouvés et références vérifiables ; intégration progressive à différents agents/IA. |
+
+Le parcours visé est **document → conversion locale → formats ouverts → dossier AI-ready → manifest → API/MCP → passages → embeddings/index → recherche → RAG**. Le dossier daté actuel est seulement une destination, **pas encore** le dossier AI-ready standardisé. Les numéros des étapes AI-ready/RAG seront fixés lorsque leur périmètre et leurs tests seront définis. Voir l'[explication AI-ready](AI_READY.md) et l'[architecture](ARCHITECTURE.md).

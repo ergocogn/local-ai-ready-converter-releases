@@ -1,11 +1,14 @@
-# Notes de version
+# Release notes
 
-## 0.3.1 — préparation, non publiée
+[Lire en français](CHANGELOG.fr.md) · [Home](README.md)
 
-- Interface de conversion organisée autour des fichiers à convertir et des résultats conservés entre lots.
-- Assistant de découverte, filtre par type, sélection et formats ajustables par fichier.
-- Nommage des sorties d'après l'original avec `-Converted`, sans écrasement.
-- PDF OCR sélectionnable comme sortie, prise en charge des CSV Windows-1252.
-- Vérification manuelle des mises à jour GitHub et téléchargement vérifié de l'installateur, à tester avec une vraie Release publique.
+## 0.3.1 — preparation, not published
 
-Les notes finales seront vérifiées avec le paquet publié. Aucune Release publique 0.3.1 n'est encore disponible.
+- Conversion UI organized around source files and results kept across batches.
+- First-run walkthrough, type filter, selection and per-file output formats.
+- Source-based `-Converted` output names, without overwriting existing files.
+- Searchable PDF selectable as an output; Windows-1252 CSV input supported.
+- Manual GitHub update check and verified installer download, still to test with a real public Release.
+- Optional Stripe support link and French/English GitHub star and Stripe labels.
+
+Final notes will be checked against the published package. No public 0.3.1 Release is available yet.

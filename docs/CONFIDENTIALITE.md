@@ -1,11 +1,23 @@
-# Confidentialité et composants intégrés
+# Confidentialité : ce qui reste local, ce qui peut utiliser Internet
 
-Les documents sélectionnés sont lus et convertis sur l'ordinateur. L'application n'exige pas de compte et n'envoie pas le contenu de vos documents à une IA distante. Les fichiers de sortie sont écrits à la destination que vous choisissez.
+[Read in English](CONFIDENTIALITE.en.md) · [Accueil](../README.fr.md)
 
-Certaines actions **facultatives** utilisent le réseau : vérifier les Releases GitHub, afficher les informations publiques d'ergoCogn sur GitHub, ouvrir un lien d'aide ou de soutien, et télécharger un modèle OCR demandé par l'utilisateur. Une éventuelle annonce doit être configurée séparément ; aucune campagne n'est fournie par défaut.
+**Vos documents sont convertis sur votre ordinateur.** L'application lit les sources choisies, écrit les sorties dans la destination que vous réglez et ne transmet pas le contenu de ces documents à une IA ni à un service de conversion. Aucun compte n'est nécessaire et aucune ligne de commande n'est demandée. Les originaux ne sont pas modifiés.
 
-L'interface Windows embarque **Microsoft Edge WebView2 Fixed Version**. Ce runtime possède ses propres conditions et peut avoir des fonctions réseau ou de protection Microsoft indépendantes de la conversion des documents. Son [mode de distribution](https://learn.microsoft.com/microsoft-edge/webview2/concepts/distribution) et les notices détaillées sont inclus dans le paquet.
+Cette affirmation concerne **la conversion**, pas chaque fonction du programme ou de Windows. Voici la distinction :
 
-**Notice Microsoft Defender SmartScreen :** le runtime WebView2 inclut SmartScreen. Cette fonction peut collecter et transmettre à Microsoft des informations relatives à l'utilisateur conformément à la [déclaration de confidentialité Microsoft](https://aka.ms/privacy) et au [livre blanc Microsoft Edge sur SmartScreen](https://learn.microsoft.com/en-us/microsoft-edge/privacy-whitepaper#smartscreen). Ce point concerne le runtime Microsoft, pas un envoi volontaire de vos documents au service de conversion.
+| Action | Réseau ? | Contenu de vos documents ? |
+| --- | --- | --- |
+| Convertir un PDF, classeur, CSV, DOCX ou une image avec les outils embarqués | Pas requis pour l'opération de conversion | Lu et écrit localement |
+| Vérifier une mise à jour ou ouvrir une page GitHub | Oui, à votre demande | Non transmis par l'application |
+| Afficher les informations publiques du profil GitHub dans « À propos » | Oui, à l'ouverture de cette vue, avec repli local hors ligne | Non transmis |
+| Ajouter une langue OCR par téléchargement | Oui, seulement si vous le demandez | Non transmis |
+| Cliquer sur un lien de soutien ou une annonce | Le navigateur ouvre un site externe | Aucun document envoyé par l'application ; le site ouvert a sa propre politique |
 
-Le paquet comporte aussi des composants libres sous licences distinctes, notamment Pandoc (GPL), OCRmyPDF et pikepdf (MPL), ainsi que fpdf2 et img2pdf (LGPL). La licence propriétaire de l'application ne retire aucun droit sur ces composants. Leurs textes et notices accompagnent l'installation dans `licenses/`. Voir [les composants tiers](COMPOSANTS_TIERS.md). Une revue finale des obligations de redistribution et de l'accès aux sources correspondantes est en cours avant toute Release publique.
+L'espace de soutien peut être masqué dans les Paramètres. Une annonce éventuelle est une image intégrée au paquet, pas une image chargée depuis un serveur à chaque affichage ; aucun script de régie n'est intégré aujourd'hui. Voir l'[explication du soutien](SOUTIEN.md).
+
+**Important pour Windows :** la fenêtre utilise Microsoft Edge **WebView2 Fixed Version** intégré. Ce runtime a ses propres conditions et peut avoir des fonctions réseau ou de protection Microsoft indépendantes de la logique de conversion. En particulier, Microsoft Defender SmartScreen peut collecter et transmettre certaines informations à Microsoft conformément à la [déclaration de confidentialité Microsoft](https://aka.ms/privacy) et au [livre blanc SmartScreen](https://learn.microsoft.com/en-us/microsoft-edge/privacy-whitepaper#smartscreen). Ce n'est pas un envoi volontaire de documents par le moteur de conversion. Voir aussi la [documentation de distribution WebView2](https://learn.microsoft.com/microsoft-edge/webview2/concepts/distribution).
+
+Les **fichiers de sortie peuvent contenir les mêmes données sensibles** que leurs originaux, parfois sous une forme plus facile à lire ou à rechercher. Choisissez une destination appropriée, protégez vos sauvegardes et relisez les données importantes avant de les partager. Un document stocké dans un dossier synchronisé par OneDrive ou un service semblable reste soumis aux réglages de ce service ; l'application ne contrôle pas cette synchronisation.
+
+Le paquet incorpore des composants sous licences distinctes ; leurs droits et notices sont présentés dans [Composants tiers](COMPOSANTS_TIERS.md). La revue finale de redistribution est en cours avant publication.

@@ -1,61 +1,106 @@
 # Local AI-Ready Converter
 
-**Vos documents, convertis chez vous. Prêts à être réutilisés où vous voulez.**
+<p align="center"><img src="docs/assets/app-icon.png" width="110" alt="Local AI-Ready Converter icon"></p>
 
-Une facture en PDF, un classeur Excel, un document Word ou un scan ne se prête pas toujours bien à la recherche et aux outils d'IA. Local AI-Ready Converter transforme ces fichiers sur votre ordinateur en texte et formats ouverts. Vous gardez la main sur les originaux, les sorties et leur destination — sans compte et sans service de conversion distant.
+<p align="center"><strong>Turn documents into reusable files — on your own computer.</strong><br>Prepare them once. Choose how to use them next.</p>
 
-> Préparation de la distribution : ce dépôt est actuellement privé. Aucun téléchargement public n'est encore annoncé.
+<p align="center">Local · Freeware · No account · Batch conversion · No command line</p>
 
-![Aperçu de l'application après conversion de trois fichiers de démonstration](docs/assets/interface-demo.png)
+<p align="center"><a href="README.fr.md">Lire en français</a></p>
 
-*Aperçu de l'interface 0.3.1 rendu dans le navigateur de test, avec l'état d'une conversion réelle d'un XLSX, d'un CSV et d'un PDF créés pour ce test. [Rapport des sorties et empreintes](docs/assets/conversion-demo.json). Aucune donnée d'utilisateur n'a été utilisée.*
+<p align="center">
+  <a href="../../releases"><img src="https://img.shields.io/badge/Windows_11_x64-Releases-18181b?style=for-the-badge&amp;logo=windows11&amp;logoColor=white" alt="Windows 11 x64 releases"></a>
+  <img src="https://img.shields.io/badge/Linux-Coming_soon-d4d4d8?style=for-the-badge&amp;logo=linux&amp;logoColor=18181b" alt="Linux coming soon; no download yet">
+  <img src="https://img.shields.io/badge/macOS-Coming_soon-d4d4d8?style=for-the-badge&amp;logo=apple&amp;logoColor=18181b" alt="macOS coming soon; no download yet">
+</p>
 
-## Télécharger et installer
+> **Publication status:** this distribution-only repository is still private. A public Windows installer is not available here yet. The proprietary development source will not be published in this repository. Linux and macOS packages are planned after Windows, but are not available yet.
 
-La première distribution prévue est pour **Windows 11 x64**. Une fois publiée, téléchargez `LocalAIReadyConverter-X.Y.Z-Setup.exe` dans les [Releases](../../releases), puis lancez-le. Le programme embarque les outils nécessaires : Python, Pandoc ou Tesseract n'ont pas à être installés séparément. Pour mettre à jour, fermez l'application et lancez le nouveau setup **sans désinstaller l'ancien**.
+## A file you can read is not always a file you can reuse
 
-Voir le [guide d'installation](docs/INSTALLATION.md). Linux et macOS sont prévus ensuite, mais aucun paquet pour ces systèmes n'est disponible aujourd'hui.
+A PDF invoice, a scanned letter, a Word report and an Excel workbook were made primarily for people to view. A script, a document search tool or an AI assistant often needs extracted text or structured data instead. Local AI-Ready Converter handles that preparation through a desktop interface: add files or folders, select compatible output formats, convert, and open the results in Explorer. **Your original documents are not modified.**
 
-## Pourquoi cet outil ?
+No Python, Pandoc or Tesseract installation is required separately for the intended Windows package. You do not need an account or a command line to use the application. Conversion runs on your computer; document contents are not sent to an ergoCogn conversion service.
 
-Parce qu'un fichier lisible à l'écran n'est pas forcément facile à exploiter. Un PDF scanné peut nécessiter de l'OCR ; un classeur contient plusieurs feuilles ; un document Word mélange texte et structure. Le convertisseur prépare des représentations plus simples à chercher, contrôler, archiver ou fournir à **l'outil de votre choix**. Il ne lance pas d'IA et ne crée pas encore d'index ou de RAG : il prépare les documents en amont.
+## See it in action
 
-La conversion locale a une conséquence concrète : **le contenu sélectionné est traité sur votre machine, et les sorties y sont écrites**. Vous n'avez pas à déposer vos documents chez un prestataire de conversion. Cela ne signifie pas « zéro réseau en toute circonstance » : vérifier les mises à jour, consulter le profil public GitHub, ouvrir un lien ou télécharger une langue OCR peut utiliser Internet. L'application n'envoie pas vos documents à ces services. Voir la [note de confidentialité et les limites du runtime Windows](docs/CONFIDENTIALITE.md).
+![The Windows interface showing converted sample documents](docs/assets/interface-demo.png)
 
-## Comment ça marche
+*The screenshot shows a real conversion of synthetic PDF, CSV and XLSX test documents in an interface preview. No user document was used. [Generated output names and checksums](docs/assets/conversion-demo.json). The [About and support preview](docs/assets/about-demo-fr.png) shows the current French wording.*
 
-1. Glissez des fichiers ou un dossier, puis filtrez et cochez ce que vous voulez traiter.
-2. Choisissez les sorties pour le lot, ou ajustez-les fichier par fichier ; la destination se règle dans Paramètres.
-3. Lancez la conversion et ouvrez chaque résultat directement depuis la colonne de droite.
+## Why prepare documents locally?
 
-Les originaux restent intacts. Les nouveaux noms reprennent le nom source avec `-Converted` ; les collisions sont numérotées plutôt qu'écrasées. L'application garde les résultats de la session visibles entre plusieurs passages.
+- **Choose the useful representation.** Extract text from a PDF, OCR a scan, make a CSV per spreadsheet sheet, or convert a Word document to Markdown. Use JSON when structured data or page references matter.
+- **Reuse the work.** Keep the converted output for later processing rather than repeating extraction or OCR every time another tool needs it.
+- **Stay in control.** Select entire folders or individual files, filter by type, and choose outputs per batch or per compatible file. Results remain visible across conversions in the same session.
+- **Keep your options open.** Use the outputs with a local AI, an online AI *if you choose to send them*, a script, a knowledge base or no AI at all.
 
-## Ce que l'application convertit
+This app prepares documents; **it does not include a generative AI model, semantic search, a local API/MCP server or RAG today.** The [roadmap](docs/ROADMAP.en.md) distinguishes these later stages from what already works.
 
-| Entrée | Sorties possibles |
+## Download and availability
+
+| Platform | Status |
 | --- | --- |
-| PDF textuel ou scanné | TXT, Markdown, JSON, PDF recherchable avec OCR |
+| Windows 11 x64 | First public package planned; the installer is still undergoing final validation. |
+| Linux | Native build and testing planned after Windows. |
+| macOS | Native build and testing planned after Linux. |
+
+Once approved and published, the Windows installer will be available under this repository's [Releases](../../releases). The [installation and update guide](docs/INSTALLATION.en.md) will then explain the graphical installation. **Do not mistake this private preview for an already-published download.** The bundled Windows build is intended to include its conversion tools and base OCR languages, so they need not be preinstalled.
+
+## Convert once. Reuse where it helps.
+
+For example, a converted PDF may give you several views of the same source:
+
+```text
+report.pdf                 original, unchanged
+report-Converted.txt       plain text
+report-Converted.md        Markdown
+report-Converted.json      structured output
+```
+
+The app can put outputs beside the source, in a dated conversion folder, or in a chosen destination. If a name already exists, it numbers the new output instead of overwriting the previous one. A second run can convert only newly requested formats for an unchanged source rather than needlessly repeating the same work in that session.
+
+“AI-ready” means **prepared for a later tool**, not “AI is running inside this app”. You decide whether to keep the output local, send it to a service, or use it without AI. Open TXT, Markdown, CSV and JSON avoid locking the result into this converter.
+
+## Supported inputs and outputs
+
+| Input | Available outputs |
+| --- | --- |
+| Text PDF | TXT, Markdown, JSON; searchable PDF if explicitly selected |
+| Scanned PDF | TXT, Markdown, JSON, searchable PDF via OCR |
 | DOCX | TXT, Markdown, JSON |
-| XLSX | JSON, un CSV par feuille |
+| XLSX | JSON, one CSV per sheet |
 | CSV | JSON |
-| PNG, JPEG, TIFF | TXT, Markdown, JSON après OCR |
+| PNG, JPEG, TIFF | TXT, Markdown, JSON via OCR |
 
-Le [guide d'utilisation](docs/UTILISATION.md) détaille les destinations, les conversions par lot, l'OCR et les limites connues.
+TXT suits straightforward text reuse. Markdown can preserve useful lightweight document structure. CSV is often the most economical view of a table. JSON is convenient when a program needs explicit structure, metadata or page boundaries; it can also be more verbose than CSV, especially for spreadsheets. **No format saves tokens automatically.** Choose the output for the next task. See the [usage guide](docs/UTILISATION.en.md) and [architecture](docs/ARCHITECTURE.en.md).
 
-## Pour quoi faire ensuite ?
+Automatic conversion is not infallible. OCR, complex tables, formulas and unusual PDF layouts can introduce omissions or errors. For important figures or decisions, check the result against the original.
 
-Un TXT léger peut servir à retrouver une information ; un JSON de PDF conserve la séparation par page ; un CSV par feuille facilite l'analyse d'un classeur. Ces fichiers peuvent être relus, vérifiés et transmis ensuite à un outil d'IA **si vous le décidez**. La conversion n'est pas une garantie d'exactitude : contrôlez les chiffres, les tableaux et le texte OCR avant un usage important. Notre [vision AI-ready](docs/AI_READY.md) explique aussi les étapes futures, distinctes de ce qui existe déjà.
+## Privacy: local conversion, with clear network boundaries
 
-## Aide et évolution
+Reading documents, OCR and writing converted files happen on your machine. There is no requirement to upload invoices, contracts or internal reports to a conversion website. A local AI workflow can keep both source and prepared output on your computer.
 
-- [Signaler un problème ou proposer une amélioration](../../issues) — disponible après l'ouverture publique du dépôt.
-- [Notes de version](CHANGELOG.md)
-- [Fonctionnement et architecture](docs/ARCHITECTURE.md)
-- [Pourquoi « Save tokens. Save energy. Use AI cleverly. » ?](docs/AI_READY.md)
-- [Feuille de route publique](docs/ROADMAP.md)
-- [Licence du produit](LICENSE.md) et [composants tiers](docs/COMPOSANTS_TIERS.md)
+**“Local” does not mean “the app never accesses the Internet.”** A manual update check, publisher information from GitHub, a support link, or an OCR-language download you request can use the network. Windows WebView2 also has its own runtime behavior. None of these features is needed to send document contents to a remote conversion service. If your chosen output directory is synchronized by OneDrive or another provider, that synchronization is outside the converter's local processing. Read the [privacy and network explanation](docs/CONFIDENTIALITE.en.md).
 
-Si le projet vous est utile, vous pourrez lui donner une étoile gratuite sur GitHub ou [le soutenir via Stripe](https://buy.stripe.com/8x214pgIZ7ho3vUftg1oI00). Le paiement se fait sur le site du prestataire, pas dans l'application.
-L'[espace de soutien et d'annonces](docs/SOUTIEN.md) est facultatif et peut être masqué.
+## 🍃 Save tokens. Save energy. Use AI cleverly.
 
-Local AI-Ready Converter est édité par **ergoCogn sàrl**. Ce dépôt est réservé à la distribution, aux notes de version et à l'aide ; le code source propriétaire de l'application n'y est pas publié.
+This is a working principle, **not a promise of a measured token or energy saving for every file**.
+
+**Save tokens:** give an AI only the relevant sheet, pages or passages when possible. A CSV for one spreadsheet sheet may be far smaller than a verbose workbook JSON. Extracting text first makes it easier for a later tool to select what matters, but the actual token count depends on the model and representation.
+
+**Save energy:** keep and reuse a suitable conversion instead of rerunning extraction or OCR for every later question. A single file may yield a tiny difference; repeated processing across a collection may matter more. The app does not claim a quantified environmental benefit.
+
+**Use AI cleverly:** prepare first, select what is relevant, then use the AI that suits your task—or none. This is the longer-term path toward documented AI-ready folders, local interoperability and retrieval; those capabilities are [planned, not currently shipped](docs/ROADMAP.en.md). [Read the full explanation](docs/AI_READY.en.md).
+
+## Documentation
+
+[Installation and updates](docs/INSTALLATION.en.md) · [Using the app](docs/UTILISATION.en.md) · [Privacy](docs/CONFIDENTIALITE.en.md) · [AI-ready vision](docs/AI_READY.en.md) · [Architecture](docs/ARCHITECTURE.en.md) · [Roadmap](docs/ROADMAP.en.md) · [Release notes](CHANGELOG.md)
+
+## Help and support
+
+Once public, this repository's [Issues](../../issues) will be the place to report a problem; please never attach confidential documents. You can [give the project a GitHub star](../../), which is free. Financial support is optional through [Stripe](https://buy.stripe.com/8x214pgIZ7ho3vUftg1oI00) and is **not** needed to use the free application. Other payment buttons are hidden until their URLs are configured. The in-app support area can be hidden in Settings. See [support and announcements](docs/SOUTIEN.en.md).
+
+Local AI-Ready Converter is published by **ergoCogn sàrl**. This repository is for binary distribution, documentation, release notes and issue tracking; it does not publish the proprietary source. Read the [product licence](LICENSE.en.md) and [third-party component notices](docs/COMPOSANTS_TIERS.en.md). Public distribution remains subject to a final licence and clean-Windows review.
+
+<p align="center"><strong>Convert once. Reuse where it helps.</strong><br>🍃 Save tokens. Save energy. Use AI cleverly.</p>

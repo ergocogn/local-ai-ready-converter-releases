@@ -1,5 +1,7 @@
 # Fonctionnement et perspectives
 
+[Read in English](ARCHITECTURE.en.md) · [Accueil](../README.fr.md)
+
 Aujourd'hui, l'application lit les fichiers sur le poste, choisit un convertisseur selon le format et écrit les sorties à la destination choisie. Les originaux ne sont pas modifiés. Les outils nécessaires sont intégrés au paquet Windows.
 
 ```mermaid
