@@ -5,7 +5,7 @@
 ## Install
 
 1. Use Windows 11 x64.
-2. Once a public package exists, download `LocalAIReadyConverter-X.Y.Z-Setup.exe` from [Releases](../../../releases).
+2. Download `LocalAIReadyConverter-X.Y.Z-Setup.exe` from [Releases](../../../releases).
 3. Run it and follow the graphical installer. Installation is for your Windows account.
 4. Open **Local AI-Ready Converter** from the Start menu or at the end of setup.
 
@@ -15,7 +15,7 @@ Do not download a `.incomplete` or `.part` file. Conversion tools and basic OCR 
 
 In **Settings → Updates**, check on demand. If a newer Release exists with a compatible Windows installer, the app can download and verify the setup, then reveal it in Explorer. It does not run or install the setup silently.
 
-Close the app, then run the newer setup. **Do not uninstall the old version first**: setup upgrades it. Your documents are not managed by the installer, and user preferences are kept. A real public-Release update check has not yet been completed because this distribution repository is still private; the update code has been tested with simulated GitHub responses.
+Close the app, then run the newer setup. **Do not uninstall the old version first**: setup upgrades it. Your documents are not managed by the installer, and user preferences are kept. The checker was tested against the public `v0.3.1` Release: version 0.3.1 reports current, while a simulated 0.3.0 detects and downloads the complete setup with size and SHA-256 verification. Installation of the update remains a manual step.
 
 ## Uninstall
 

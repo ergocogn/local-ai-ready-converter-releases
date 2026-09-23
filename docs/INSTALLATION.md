@@ -17,7 +17,7 @@ Dans **Paramètres → Mises à jour**, lancez une vérification. Si une version
 
 Fermez l'application, puis lancez le nouveau setup. **Ne désinstallez pas la version précédente** : le setup la remplace. Vos documents ne sont pas gérés par l'installateur ; les paramètres utilisateur sont conservés.
 
-Une vérification contre une vraie Release publique n'a pas encore été effectuée : le dépôt de distribution est toujours privé. Le code des mises à jour a été testé avec des réponses GitHub simulées.
+La vérification a été testée contre la Release publique `v0.3.1` : une application en 0.3.1 se voit à jour ; en simulant 0.3.0, elle détecte la nouvelle version et télécharge le setup complet avec vérification de taille et de SHA-256. L'installation de la mise à jour reste manuelle, comme décrit ci-dessus.
 
 ## Désinstallation
 
