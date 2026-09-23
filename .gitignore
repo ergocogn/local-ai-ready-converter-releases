@@ -1,0 +1,21 @@
+# Les binaires sont publiés comme assets de Release, jamais dans l'historique Git.
+*.exe
+*.msi
+*.zip
+*.7z
+*.dmg
+*.pkg
+*.AppImage
+*.deb
+*.rpm
+*.part
+
+# Aucun code ni environnement de développement dans ce dépôt.
+src/
+larc/
+tests/
+vendor/
+build/
+dist/
+.venv/
+__pycache__/
