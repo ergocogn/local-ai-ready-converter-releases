@@ -15,7 +15,7 @@ Do not download a `.incomplete` or `.part` file. Conversion tools and basic OCR 
 
 In **Settings → Updates**, check on demand. If a newer Release exists with a compatible Windows installer, the app can download and verify the setup, then reveal it in Explorer. It does not run or install the setup silently.
 
-Close the app, then run the newer setup. **Do not uninstall the old version first**: setup upgrades it. Your documents are not managed by the installer, and user preferences are kept. The checker was tested against the public `v0.3.1` Release: version 0.3.1 reports current, while a simulated 0.3.0 detects and downloads the complete setup with size and SHA-256 verification. Installation of the update remains a manual step.
+Close the app, then run the newer setup. **Do not uninstall the old version first**: setup upgrades it. Your documents are not managed by the installer, and user preferences are kept. The checker was first tested against the public `v0.3.1` Release, including simulated detection from an older version and a complete download verified by size and SHA-256. Release `v0.3.2` is the first real upgrade test from an installed 0.3.1. Installation of the update remains a manual step.
 
 ## Uninstall
 

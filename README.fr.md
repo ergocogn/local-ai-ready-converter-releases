@@ -14,7 +14,7 @@
   <img src="https://img.shields.io/badge/macOS-Bient%C3%B4t-d4d4d8?style=for-the-badge&amp;logo=apple&amp;logoColor=18181b" alt="macOS bientôt ; aucun téléchargement pour le moment">
 </p>
 
-> **Windows 0.3.1 est la première version publique.** Téléchargez l'installateur dans les [Releases](../../releases). Ce dépôt contient la distribution, pas le code source propriétaire de développement. Linux et macOS sont prévus, mais pas encore disponibles.
+> **Windows 0.3.2 est la version publique actuelle.** Elle ajoute l’arrêt immédiat et une gestion plus sûre des fichiers cloud disponibles uniquement en ligne. Téléchargez l'installateur dans les [Releases](../../releases). Ce dépôt contient la distribution, pas le code source propriétaire de développement. Linux et macOS sont prévus, mais pas encore disponibles.
 
 ## Un fichier lisible n'est pas toujours facile à réutiliser
 

@@ -2,6 +2,16 @@
 
 [Lire en français](CHANGELOG.fr.md) · [Home](README.md)
 
+## 0.3.2 — cancellation reliability update (23 September 2026)
+
+- Stop an active conversion immediately, including its external OCR process tree.
+- Allow the application window to close safely while a conversion is being stopped.
+- Show a compact Stop icon during processing, with an accessible tooltip.
+- Report OneDrive or other Windows cloud files that are still online-only instead of silently triggering a long hydration during a batch.
+- Keep cancellations distinct from conversion failures in the result list.
+
+This is the recommended Windows release. Close version 0.3.1 and run `LocalAIReadyConverter-0.3.2-Setup.exe`; uninstalling first is not required.
+
 ## 0.3.1 — first Windows release (23 September 2026)
 
 - Conversion UI organized around source files and results kept across batches.

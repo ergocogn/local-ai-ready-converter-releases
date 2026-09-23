@@ -14,7 +14,7 @@
   <img src="https://img.shields.io/badge/macOS-Coming_soon-d4d4d8?style=for-the-badge&amp;logo=apple&amp;logoColor=18181b" alt="macOS coming soon; no download yet">
 </p>
 
-> **Windows 0.3.1 is the first public release.** Download its installer from [Releases](../../releases). This repository contains distribution material, not the proprietary development source. Linux and macOS packages are planned, but are not available yet.
+> **Windows 0.3.2 is the current public release.** It adds immediate cancellation and safer handling of online-only cloud files. Download its installer from [Releases](../../releases). This repository contains distribution material, not the proprietary development source. Linux and macOS packages are planned, but are not available yet.
 
 ## A file you can read is not always a file you can reuse
 
