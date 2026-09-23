@@ -9,9 +9,10 @@ flowchart TB
   A["0.1–0.2<br/>local engine · OCR · batch"] --> B["0.3.1 Windows<br/>UI · walkthrough · per-file formats"]
   B --> C["Windows validation<br/>notices · offline Sandbox · exact package"]
   C --> D["Windows Release<br/>setup · notices · checksums"]
-  D --> U["Real update test<br/>GitHub detection · download · upgrade"]
+  D --> U["Windows live update<br/>GitHub detection · verified download · upgrade"]
 
-  D --> L["Linux 0.3.2<br/>native tools · AppImage · clean-VM tests"] --> M["macOS<br/>native tools · build · tests"]
+  D --> L["Linux 0.3.2<br/>native tools · AppImage · clean-VM tests"] --> UL["Linux cross-version update<br/>next Release"]
+  L --> M["macOS<br/>native tools · build · tests"]
   D --> Q["Output quality<br/>PDF/tables · errors · possible auto choice"]
   Q --> F["AI-ready folder<br/>ID · manifest · metadata · assets"]
   F --> P["Local interoperability<br/>API/MCP · permissions · reuse"]
@@ -20,8 +21,8 @@ flowchart TB
   classDef done fill:#e9f5ef,stroke:#287451,color:#173f2e
   classDef active fill:#fff4dd,stroke:#a56b00,color:#553600
   classDef future fill:#f6f6f6,stroke:#666,color:#222
-  class A,B,C,D,L done
-  class U active
+  class A,B,C,D,U,L done
+  class UL active
   class M,Q,F,P,K,R future
 ```
 
@@ -32,7 +33,7 @@ flowchart TB
 | **0.1–0.2 — foundation** | Conversion engine, OCR, batch handling, interface and initial destinations developed. | Historical milestones, not a current public offering. |
 | **0.3 / 0.3.1 — Windows** | UI, walkthrough, per-file formats, session results and configurable links. Automated tests and demo conversions run. | Setup was installed, tested with conversion/OCR and uninstalled in an offline Windows Sandbox. |
 | **First Windows Release** | 0.3.1 in a separate distribution repository, without proprietary source. | Installer, bilingual notes, third-party notices and sources, checksum. The development repository remains private. |
-| **Update verification** | Public Release detected: 0.3.1 reports current, while a simulated 0.3.0 detects 0.3.1; full download and SHA-256 verified. Offline cases have simulated tests. | Repeat a manual upgrade from a real older installation and check the in-app flow for a future release. |
+| **Update verification** | Windows completed a real upgrade from 0.3.1 to 0.3.2. Linux 0.3.2 recognizes the public Release and its exact AppImage name, size and SHA-256; offline/error cases and executable permission are covered by automated tests. | The mechanism is delivered. A live Linux upgrade between two AppImages requires the next Linux Release because no older Linux package exists. |
 | **Linux 0.3.2** | Native x86_64 AppImage built with bundled tools and a static runtime; conversions, OCR, searchable PDF and the PySide6/Qt window passed on a clean Ubuntu Desktop 24.04 VM. | Published package, checksum and bilingual instructions. The download/update path is covered by automated tests and will receive a live cross-version test with the next Linux release. |
 | **macOS** | No macOS package validated. | Build on macOS with compatible tools; handle signing/notarization if required for the chosen distribution route; test UI and conversion/OCR on a clean machine. Verify its update route. |
 | **Quality / possible 0.4 cycle** | Intended, not promised for the first Release. | Better errors, complex tables/PDFs and compact tabular JSON; define any automatic-output mode explicitly, then test its rules. |
