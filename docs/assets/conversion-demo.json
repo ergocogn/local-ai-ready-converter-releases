@@ -1,0 +1,49 @@
+{
+  "kind": "conversion_de_demonstration",
+  "status": "ok",
+  "sources": [
+    {
+      "name": "tableau.xlsx",
+      "outputs": [
+        {
+          "name": "tableau-Converted-001-Données.csv",
+          "sha256": "4a8f1f8fa621be1475e68a7bc7cf637e0bd2c9369d29f53b9fc6331fa394a560"
+        },
+        {
+          "name": "tableau-Converted-002-Autre.csv",
+          "sha256": "b767c545f2fd0d5a9535225c98124a2079e10c35b1e44a73848b4a7afab7dc5e"
+        },
+        {
+          "name": "tableau-Converted.json",
+          "sha256": "3893dbd3ffe5947ed0e1654707dedc623e273b1c8edbd64c643d996ba99f4e91"
+        }
+      ]
+    },
+    {
+      "name": "tableau.csv",
+      "outputs": [
+        {
+          "name": "tableau-Converted-002.json",
+          "sha256": "b5ef92d067d369079cedcb323de7d5f195c90a642ac8fcb19094fb9cdda94e69"
+        }
+      ]
+    },
+    {
+      "name": "texte.pdf",
+      "outputs": [
+        {
+          "name": "texte-Converted.json",
+          "sha256": "408e3c4b8ff554fc6b6b5ab68c109573b3e525e7a1979a179c89d760c299d337"
+        },
+        {
+          "name": "texte-Converted.md",
+          "sha256": "82b2fa789725e9fd3c0eba60616021942b4fc7964b850b7a02e71eef996ab1f2"
+        },
+        {
+          "name": "texte-Converted.txt",
+          "sha256": "7cbd1f94a583127a12b024583e2ae5104c46af7728881ed56a991003839755b1"
+        }
+      ]
+    }
+  ]
+}

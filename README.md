@@ -6,9 +6,9 @@ Une facture en PDF, un classeur Excel, un document Word ou un scan ne se prête 
 
 > Préparation de la distribution : ce dépôt est actuellement privé. Aucun téléchargement public n'est encore annoncé.
 
-![Aperçu de l'application avec deux fichiers de démonstration](docs/assets/interface-demo.png)
+![Aperçu de l'application après conversion de trois fichiers de démonstration](docs/assets/interface-demo.png)
 
-*Aperçu de l'interface 0.3.1. Les fichiers montrés ont été créés pour cette capture ; aucune donnée d'utilisateur n'a été utilisée.*
+*Aperçu de l'interface 0.3.1 rendu dans le navigateur de test, avec l'état d'une conversion réelle d'un XLSX, d'un CSV et d'un PDF créés pour ce test. [Rapport des sorties et empreintes](docs/assets/conversion-demo.json). Aucune donnée d'utilisateur n'a été utilisée.*
 
 ## Télécharger et installer
 
@@ -55,7 +55,7 @@ Un TXT léger peut servir à retrouver une information ; un JSON de PDF conserve
 - [Feuille de route publique](docs/ROADMAP.md)
 - [Licence du produit](LICENSE.md) et [composants tiers](docs/COMPOSANTS_TIERS.md)
 
-Si le projet vous est utile, vous pourrez aussi lui donner une étoile sur GitHub. Les liens de soutien financier n'apparaîtront que lorsqu'ils seront réellement configurés ; aucun paiement n'est intégré à l'application.
+Si le projet vous est utile, vous pourrez lui donner une étoile gratuite sur GitHub ou [le soutenir via Stripe](https://buy.stripe.com/8x214pgIZ7ho3vUftg1oI00). Le paiement se fait sur le site du prestataire, pas dans l'application.
 L'[espace de soutien et d'annonces](docs/SOUTIEN.md) est facultatif et peut être masqué.
 
 Local AI-Ready Converter est édité par **ergoCogn sàrl**. Ce dépôt est réservé à la distribution, aux notes de version et à l'aide ; le code source propriétaire de l'application n'y est pas publié.
