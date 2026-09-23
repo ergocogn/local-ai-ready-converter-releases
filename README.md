@@ -10,11 +10,11 @@
 
 <p align="center">
   <a href="../../releases"><img src="docs/assets/windows-releases.svg" alt="Windows 11 x64 releases"></a>
-  <img src="https://img.shields.io/badge/Linux-Coming_soon-d4d4d8?style=for-the-badge&amp;logo=linux&amp;logoColor=18181b" alt="Linux coming soon; no download yet">
+  <a href="../../releases"><img src="https://img.shields.io/badge/Linux-0.3.2-18181b?style=for-the-badge&amp;logo=linux&amp;logoColor=white" alt="Linux 0.3.2 AppImage"></a>
   <img src="https://img.shields.io/badge/macOS-Coming_soon-d4d4d8?style=for-the-badge&amp;logo=apple&amp;logoColor=18181b" alt="macOS coming soon; no download yet">
 </p>
 
-> **Windows 0.3.2 is the current public release.** It adds immediate cancellation and safer handling of online-only cloud files. Download its installer from [Releases](../../releases). This repository contains distribution material, not the proprietary development source. Linux and macOS packages are planned, but are not available yet.
+> **Version 0.3.2 is available for Windows 11 x64 and Linux x86_64.** It includes immediate cancellation and safer handling of online-only cloud files. Download the native package from [Releases](../../releases). This repository contains distribution material, not the proprietary development source. macOS is planned next.
 
 ## A file you can read is not always a file you can reuse
 
@@ -41,17 +41,17 @@ This app prepares documents; **it does not include a generative AI model, semant
 
 ## Proven tools, one visual workflow
 
-This is not a replacement for every underlying converter. The app brings established tools together, handles files and destinations, runs batch jobs and presents the outputs without requiring the user to operate each tool separately. **python-docx** extracts DOCX text and structure; **Tesseract** and **OCRmyPDF** provide OCR and searchable PDFs; **pypdf** extracts text from text PDFs; **openpyxl** reads Excel workbooks. The Windows interface uses **pywebview and Microsoft WebView2**. These components keep their own licences and conditions: see the [third-party component summary](docs/COMPOSANTS_TIERS.en.md).
+This is not a replacement for every underlying converter. The app brings established tools together, handles files and destinations, runs batch jobs and presents the outputs without requiring the user to operate each tool separately. **python-docx** extracts DOCX text and structure; **Tesseract** and **OCRmyPDF** provide OCR and searchable PDFs; **pypdf** extracts text from text PDFs; **openpyxl** reads Excel workbooks. The interface uses **pywebview**, with Microsoft WebView2 on Windows and PySide6/Qt on Linux. These components keep their own licences and conditions: see the [third-party component summary](docs/COMPOSANTS_TIERS.en.md).
 
 ## Download and availability
 
 | Platform | Status |
 | --- | --- |
 | Windows 11 x64 | Installer available from [Releases](../../releases). |
-| Linux | Native build and testing planned after Windows. |
+| Linux x86_64 | Self-contained AppImage available from [Releases](../../releases), validated on a clean Ubuntu Desktop 24.04 VM. |
 | macOS | Native build and testing planned after Linux. |
 
-Get the Windows installer from [Releases](../../releases), check its [SHA-256 checksum](SHA256SUMS.txt), and follow the [installation and update guide](docs/INSTALLATION.en.md). The package includes its conversion tools and base OCR languages; you need not install them separately.
+Get the Windows installer or Linux AppImage from [Releases](../../releases), check its [SHA-256 checksum](SHA256SUMS.txt), and follow the [installation and update guide](docs/INSTALLATION.en.md). Both packages include their conversion tools and base OCR languages; you need not install Python, Tesseract or libfuse2 separately.
 
 ## Convert once. Reuse where it helps.
 

@@ -10,11 +10,11 @@
 
 <p align="center">
   <a href="../../releases"><img src="docs/assets/windows-releases.svg" alt="Releases Windows 11 x64"></a>
-  <img src="https://img.shields.io/badge/Linux-Bient%C3%B4t-d4d4d8?style=for-the-badge&amp;logo=linux&amp;logoColor=18181b" alt="Linux bientôt ; aucun téléchargement pour le moment">
+  <a href="../../releases"><img src="https://img.shields.io/badge/Linux-0.3.2-18181b?style=for-the-badge&amp;logo=linux&amp;logoColor=white" alt="Linux 0.3.2 AppImage"></a>
   <img src="https://img.shields.io/badge/macOS-Bient%C3%B4t-d4d4d8?style=for-the-badge&amp;logo=apple&amp;logoColor=18181b" alt="macOS bientôt ; aucun téléchargement pour le moment">
 </p>
 
-> **Windows 0.3.2 est la version publique actuelle.** Elle ajoute l’arrêt immédiat et une gestion plus sûre des fichiers cloud disponibles uniquement en ligne. Téléchargez l'installateur dans les [Releases](../../releases). Ce dépôt contient la distribution, pas le code source propriétaire de développement. Linux et macOS sont prévus, mais pas encore disponibles.
+> **La version 0.3.2 est disponible pour Windows 11 x64 et Linux x86_64.** Elle comprend l’arrêt immédiat et une gestion plus sûre des fichiers cloud disponibles uniquement en ligne. Téléchargez le paquet natif dans les [Releases](../../releases). Ce dépôt contient la distribution, pas le code source propriétaire de développement. macOS est la prochaine plateforme prévue.
 
 ## Un fichier lisible n'est pas toujours facile à réutiliser
 
@@ -41,17 +41,17 @@ L'application **prépare les documents** : elle n'embarque aujourd'hui ni modèl
 
 ## Des outils éprouvés, un seul parcours visuel
 
-L'application ne prétend pas remplacer tous les convertisseurs sous-jacents. Elle les rassemble, gère les fichiers et les destinations, lance les lots et présente les résultats sans demander à chacun de manipuler ces outils séparément. **python-docx** extrait le texte et la structure des DOCX ; **Tesseract** et **OCRmyPDF** assurent l'OCR et les PDF recherchables ; **pypdf** extrait le texte des PDF textuels ; **openpyxl** lit les classeurs Excel. L'interface Windows utilise **pywebview et Microsoft WebView2**. Chaque composant conserve sa licence et ses conditions : voir les [composants tiers](docs/COMPOSANTS_TIERS.md).
+L'application ne prétend pas remplacer tous les convertisseurs sous-jacents. Elle les rassemble, gère les fichiers et les destinations, lance les lots et présente les résultats sans demander à chacun de manipuler ces outils séparément. **python-docx** extrait le texte et la structure des DOCX ; **Tesseract** et **OCRmyPDF** assurent l'OCR et les PDF recherchables ; **pypdf** extrait le texte des PDF textuels ; **openpyxl** lit les classeurs Excel. L'interface utilise **pywebview**, avec Microsoft WebView2 sous Windows et PySide6/Qt sous Linux. Chaque composant conserve sa licence et ses conditions : voir les [composants tiers](docs/COMPOSANTS_TIERS.md).
 
 ## Téléchargement et disponibilité
 
 | Plateforme | État |
 | --- | --- |
 | Windows 11 x64 | Installateur disponible dans les [Releases](../../releases). |
-| Linux | Construction et tests natifs prévus après Windows. |
+| Linux x86_64 | AppImage autonome disponible dans les [Releases](../../releases), validée sur une VM Ubuntu Desktop 24.04 propre. |
 | macOS | Construction et tests natifs prévus après Linux. |
 
-Téléchargez l'installateur Windows dans les [Releases](../../releases), vérifiez son [empreinte SHA-256](SHA256SUMS.txt), puis suivez le [guide d'installation et de mise à jour](docs/INSTALLATION.md). Le paquet embarque ses outils de conversion et ses langues OCR de base : vous n'avez pas à les installer séparément.
+Téléchargez l'installateur Windows ou l'AppImage Linux dans les [Releases](../../releases), vérifiez son [empreinte SHA-256](SHA256SUMS.txt), puis suivez le [guide d'installation et de mise à jour](docs/INSTALLATION.md). Les deux paquets embarquent leurs outils de conversion et leurs langues OCR de base : vous n'avez pas à installer séparément Python, Tesseract ou libfuse2.
 
 ## Convertir une fois. Réutiliser quand c'est utile.
 

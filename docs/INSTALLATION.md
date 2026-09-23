@@ -1,26 +1,29 @@
-# Installer et mettre à jour sur Windows
+# Installer et mettre à jour
 
 [Read in English](INSTALLATION.en.md) · [Accueil](../README.fr.md)
 
-## Installation
+## Windows 11 x64
 
-1. Utilisez Windows 11 x64.
-2. Téléchargez le fichier `LocalAIReadyConverter-X.Y.Z-Setup.exe` depuis les [Releases](../../../releases).
-3. Lancez le setup et suivez l'assistant. L'installation se fait pour votre compte Windows.
-4. Ouvrez **Local AI-Ready Converter** depuis le menu Démarrer ou à la dernière étape du setup.
+1. Téléchargez `LocalAIReadyConverter-X.Y.Z-Setup.exe` depuis les [Releases](../../../releases).
+2. Lancez le setup et suivez l'assistant. L'installation se fait pour votre compte Windows.
+3. Ouvrez **Local AI-Ready Converter** depuis le menu Démarrer ou à la dernière étape du setup.
 
-Ne téléchargez pas un fichier portant `.incomplete` ou `.part`. Les outils de conversion et les langues OCR de base sont inclus : pas besoin d'installer séparément Python ou Tesseract sur le poste utilisateur. L'application n'exige aucune ligne de commande.
+Ne téléchargez pas un fichier portant `.incomplete` ou `.part`. Le setup contient les outils de conversion et les langues OCR de base : pas besoin d'installer séparément Python ou Tesseract. Aucune ligne de commande n'est nécessaire.
 
-## Mise à jour
+Pour une mise à jour, fermez l'application et lancez le nouveau setup. **Ne désinstallez pas l'ancienne version** : le setup la met à niveau. Les préférences sont conservées et l'installateur ne gère pas vos documents. Pour désinstaller, utilisez **Paramètres Windows → Applications installées → Local AI-Ready Converter → Désinstaller**.
 
-Dans **Paramètres → Mises à jour**, lancez une vérification. Si une version plus récente est disponible, l'application peut télécharger le setup et le montrer dans l'Explorateur. Elle ne l'exécute pas et ne l'installe pas automatiquement.
+## Linux x86_64
 
-Fermez l'application, puis lancez le nouveau setup. **Ne désinstallez pas la version précédente** : le setup la remplace. Vos documents ne sont pas gérés par l'installateur ; les paramètres utilisateur sont conservés.
+1. Téléchargez `LocalAIReadyConverter-X.Y.Z-Linux-x86_64.AppImage` depuis les [Releases](../../../releases).
+2. Dans votre gestionnaire de fichiers, ouvrez **Propriétés → Permissions** et autorisez l'exécution du fichier comme un programme.
+3. Double-cliquez sur l'AppImage.
 
-La vérification a d’abord été testée contre la Release publique `v0.3.1`, avec détection simulée d’une version plus ancienne et téléchargement complet vérifié par taille et SHA-256. La Release `v0.3.2` sert au premier essai réel de mise à niveau depuis une 0.3.1 installée. L'installation de la mise à jour reste manuelle, comme décrit ci-dessus.
+L'AppImage est portable : elle ne nécessite aucune installation globale. Elle a été validée sur une VM Ubuntu Desktop 24.04 propre et contient Python, Tesseract, les langues OCR de base et un runtime AppImage statique moderne ; `libfuse2` n'est pas requis. Pour la retirer, supprimez l'AppImage. Vos originaux et fichiers convertis ne sont pas supprimés.
 
-## Désinstallation
+## Mises à jour
 
-Utilisez **Paramètres Windows → Applications installées → Local AI-Ready Converter → Désinstaller**. La désinstallation retire l'application, pas vos documents ni les fichiers convertis.
+Dans **Paramètres → Mises à jour**, lancez une vérification. Si une Release plus récente contient un paquet natif compatible, l'application le télécharge, vérifie sa taille et son empreinte SHA-256, puis l'affiche dans le gestionnaire de fichiers. Elle ne l'exécute ni ne l'installe silencieusement.
 
-Si l'installation ou une mise à jour échoue, fermez toute fenêtre de l'application et réessayez. Pour signaler un problème, ouvrez une [Issue](../../../issues) en indiquant Windows, la version de l'application et le message d'erreur, sans joindre de document confidentiel.
+Sous Windows, fermez l'application et lancez le setup téléchargé. Sous Linux, fermez l'application et ouvrez la nouvelle AppImage ; après un téléchargement vérifié, l'application lui attribue le droit d'exécution. L'installation d'une mise à jour reste une action manuelle et visible.
+
+Si l'installation, le démarrage ou la mise à jour échoue, fermez toutes les fenêtres de l'application et réessayez. [Signalez le problème](../../../issues) avec votre système, la version de l'application et le message exact, sans jamais joindre de document confidentiel.

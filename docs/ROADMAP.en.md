@@ -2,7 +2,7 @@
 
 [Lire en français](ROADMAP.md) · [Home](../README.md)
 
-**Status, not a date promise.** Versions 0.1, 0.2 and 0.3 were development milestones; Windows 0.3.1 is the first public Release. Linux and macOS are not distributed yet.
+**Status, not a date promise.** Versions 0.1, 0.2 and 0.3 were development milestones. Windows 0.3.1 was the first public Release; version 0.3.2 is now packaged for Windows and Linux. macOS is next.
 
 ```mermaid
 flowchart TB
@@ -11,7 +11,7 @@ flowchart TB
   C --> D["Windows Release<br/>setup · notices · checksums"]
   D --> U["Real update test<br/>GitHub detection · download · upgrade"]
 
-  D --> L["Linux<br/>native tools · build · tests"] --> M["macOS<br/>native tools · build · tests"]
+  D --> L["Linux 0.3.2<br/>native tools · AppImage · clean-VM tests"] --> M["macOS<br/>native tools · build · tests"]
   D --> Q["Output quality<br/>PDF/tables · errors · possible auto choice"]
   Q --> F["AI-ready folder<br/>ID · manifest · metadata · assets"]
   F --> P["Local interoperability<br/>API/MCP · permissions · reuse"]
@@ -20,9 +20,9 @@ flowchart TB
   classDef done fill:#e9f5ef,stroke:#287451,color:#173f2e
   classDef active fill:#fff4dd,stroke:#a56b00,color:#553600
   classDef future fill:#f6f6f6,stroke:#666,color:#222
-  class A,B,C,D done
+  class A,B,C,D,L done
   class U active
-  class L,M,Q,F,P,K,R future
+  class M,Q,F,P,K,R future
 ```
 
 **Green:** delivered and checked. **Amber:** validation in progress. **Grey:** not built yet. After Windows, platform builds and product evolution are independent branches: AI-ready/RAG must not delay Linux and macOS.
@@ -33,7 +33,7 @@ flowchart TB
 | **0.3 / 0.3.1 — Windows** | UI, walkthrough, per-file formats, session results and configurable links. Automated tests and demo conversions run. | Setup was installed, tested with conversion/OCR and uninstalled in an offline Windows Sandbox. |
 | **First Windows Release** | 0.3.1 in a separate distribution repository, without proprietary source. | Installer, bilingual notes, third-party notices and sources, checksum. The development repository remains private. |
 | **Update verification** | Public Release detected: 0.3.1 reports current, while a simulated 0.3.0 detects 0.3.1; full download and SHA-256 verified. Offline cases have simulated tests. | Repeat a manual upgrade from a real older installation and check the in-app flow for a future release. |
-| **Linux** | Python engine is largely reusable; no Linux package validated. | Build on Linux with bundled dependencies and suitable pywebview backend; test conversion/OCR and installation on a clean system. Check Linux download links and update strategy. |
+| **Linux 0.3.2** | Native x86_64 AppImage built with bundled tools and a static runtime; conversions, OCR, searchable PDF and the PySide6/Qt window passed on a clean Ubuntu Desktop 24.04 VM. | Published package, checksum and bilingual instructions. The download/update path is covered by automated tests and will receive a live cross-version test with the next Linux release. |
 | **macOS** | No macOS package validated. | Build on macOS with compatible tools; handle signing/notarization if required for the chosen distribution route; test UI and conversion/OCR on a clean machine. Verify its update route. |
 | **Quality / possible 0.4 cycle** | Intended, not promised for the first Release. | Better errors, complex tables/PDFs and compact tabular JSON; define any automatic-output mode explicitly, then test its rules. |
 | **AI-ready structure** | Not implemented yet. | Stable folder, document ID, versioned JSON manifest, provenance, produced files, OCR/language, source format and organized assets. |
@@ -43,4 +43,4 @@ flowchart TB
 
 The intended path is **document → local conversion → open formats → AI-ready folder → manifest → API/MCP → chunks → embeddings/index → retrieval → RAG**. Today's dated output folder is only a destination, **not yet** the standardized AI-ready folder. Version numbers for AI-ready/RAG stages will be decided when scope and tests are defined. See the [AI-ready explanation](AI_READY.en.md) and [architecture](ARCHITECTURE.en.md).
 
-For discoverability, the repository description is “Local desktop document converter: PDF OCR, DOCX to Markdown, XLSX to CSV/JSON. Private by design; no account or command line.” Topics: `document-converter`, `pdf-ocr`, `local-first`, `batch-conversion`, `desktop-app`, `privacy`, `markdown`, `windows`. Do not use `open-source`: the application source is not published.
+For discoverability, the repository description is “Local desktop document converter: PDF OCR, DOCX to Markdown, XLSX to CSV/JSON. Private by design; no account or command line.” Topics: `document-converter`, `pdf-ocr`, `local-first`, `batch-conversion`, `desktop-app`, `privacy`, `markdown`, `json`, `tesseract`, `ocrmypdf`, `windows`, `linux`. Do not use `open-source`: the application source is not published.

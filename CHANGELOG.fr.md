@@ -9,8 +9,11 @@
 - Icône Stop compacte pendant le traitement, avec infobulle accessible.
 - Signalement clair des fichiers OneDrive ou cloud Windows encore disponibles uniquement en ligne, sans lancer silencieusement un long téléchargement pendant le lot.
 - Distinction entre une annulation et un échec de conversion dans les résultats.
+- Première AppImage Linux x86_64 autonome, avec le même moteur de conversion et une interface de bureau PySide6/Qt.
+- Python, Tesseract, langues OCR et runtime AppImage statique signé intégrés ; aucune installation séparée de Python, Tesseract ou `libfuse2` n'est requise.
+- Validation directe de l'AppImage sur une VM Ubuntu Desktop 24.04 propre : démarrage, conversion DOCX/PDF/CSV/XLSX/images/TIFF, OCR multilingue et PDF recherchable.
 
-Cette version Windows est recommandée. Fermez la 0.3.1 et lancez `LocalAIReadyConverter-0.3.2-Setup.exe` ; aucune désinstallation préalable n’est nécessaire.
+Cette version est recommandée sous Windows et Linux. Sous Windows, fermez la 0.3.1 et lancez `LocalAIReadyConverter-0.3.2-Setup.exe` ; aucune désinstallation préalable n’est nécessaire. Sous Linux x86_64, téléchargez l'AppImage, autorisez son exécution dans les propriétés du fichier, puis double-cliquez dessus.
 
 ## 0.3.1 — première version Windows (23 septembre 2026)
 
