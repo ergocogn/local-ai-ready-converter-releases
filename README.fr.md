@@ -14,7 +14,7 @@
   <img src="https://img.shields.io/badge/macOS-Bient%C3%B4t-d4d4d8?style=for-the-badge&amp;logo=apple&amp;logoColor=18181b" alt="macOS bientôt ; aucun téléchargement pour le moment">
 </p>
 
-> **État de publication :** ce dépôt réservé à la distribution est encore privé. Aucun installateur Windows public n'y est disponible pour l'instant. Le code source propriétaire de développement n'y sera pas publié. Linux et macOS sont prévus après Windows, mais ne sont pas encore disponibles.
+> **Windows 0.3.1 est la première version publique.** Téléchargez l'installateur dans les [Releases](../../releases). Ce dépôt contient la distribution, pas le code source propriétaire de développement. Linux et macOS sont prévus, mais pas encore disponibles.
 
 ## Un fichier lisible n'est pas toujours facile à réutiliser
 
@@ -47,11 +47,11 @@ L'application ne prétend pas remplacer tous les convertisseurs sous-jacents. El
 
 | Plateforme | État |
 | --- | --- |
-| Windows 11 x64 | Première version publique visée ; l'installateur attend encore sa validation finale. |
+| Windows 11 x64 | Installateur disponible dans les [Releases](../../releases). |
 | Linux | Construction et tests natifs prévus après Windows. |
 | macOS | Construction et tests natifs prévus après Linux. |
 
-Une fois validé et publié, l'installateur Windows sera disponible dans les [Releases](../../releases) de ce dépôt. Le [guide d'installation et de mise à jour](docs/INSTALLATION.md) expliquera alors l'installation graphique. **Ne confondez pas cet aperçu privé avec un téléchargement déjà publié.** Le paquet Windows prévu embarque ses outils de conversion et ses langues OCR de base : il n'exige pas qu'ils soient préinstallés.
+Téléchargez l'installateur Windows dans les [Releases](../../releases), vérifiez son [empreinte SHA-256](SHA256SUMS.txt), puis suivez le [guide d'installation et de mise à jour](docs/INSTALLATION.md). Le paquet embarque ses outils de conversion et ses langues OCR de base : vous n'avez pas à les installer séparément.
 
 ## Convertir une fois. Réutiliser quand c'est utile.
 
@@ -105,8 +105,8 @@ C'est un principe de travail, **pas la promesse d'une économie mesurée de toke
 
 ## Aide et soutien
 
-Après ouverture du dépôt au public, ses [Issues](../../issues) permettront de signaler un problème ; n'y joignez jamais de document confidentiel. Vous pouvez [donner une étoile GitHub au projet](../../) gratuitement. Le soutien financier est facultatif via [Stripe](https://buy.stripe.com/8x214pgIZ7ho3vUftg1oI00) et n'est **pas** nécessaire pour utiliser l'application gratuite. Les autres boutons de paiement restent masqués tant que leurs URL ne sont pas configurées. L'espace de soutien dans l'application peut être masqué dans les Paramètres. Voir la [page soutien et annonces](docs/SOUTIEN.md).
+Utilisez les [Issues](../../issues) de ce dépôt pour signaler un problème ; n'y joignez jamais de document confidentiel. Vous pouvez [donner une étoile GitHub au projet](../../) gratuitement. Le soutien financier est facultatif via [Stripe](https://buy.stripe.com/8x214pgIZ7ho3vUftg1oI00) et n'est **pas** nécessaire pour utiliser l'application gratuite. Les autres boutons de paiement restent masqués tant que leurs URL ne sont pas configurées. L'espace de soutien dans l'application peut être masqué dans les Paramètres. Voir la [page soutien et annonces](docs/SOUTIEN.md).
 
-Local AI-Ready Converter est édité par **ergoCogn sàrl**. Ce dépôt sert à la distribution des exécutables, à la documentation, aux notes de version et au suivi des problèmes ; il ne publie pas le code source propriétaire. Voir la [licence française du produit](LICENSE.fr.md), sa [traduction anglaise](LICENSE.en.md) et les [notices des composants tiers](docs/COMPOSANTS_TIERS.md). La publication publique attend encore la revue finale des licences et un test sur Windows propre.
+Local AI-Ready Converter est édité par **ergoCogn sàrl**. Ce dépôt sert à la distribution des exécutables, à la documentation, aux notes de version et au suivi des problèmes ; il ne publie pas le code source propriétaire. Voir la [licence française du produit](LICENSE.fr.md), sa [traduction anglaise](LICENSE.en.md) et les [notices des composants tiers](docs/COMPOSANTS_TIERS.md). Le setup Windows a été testé hors ligne dans un Windows Sandbox propre.
 
 <p align="center"><strong>Convertir une fois. Réutiliser quand c'est utile.</strong><br>🍃 Save tokens. Save energy. Use AI cleverly.</p>

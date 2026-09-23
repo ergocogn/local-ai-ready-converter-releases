@@ -1,0 +1,1 @@
+d664ec647ddd0ec58459da7ced8ea9e5353959b16cc14c5f2744b2a85cd11dba  LocalAIReadyConverter-0.3.1-Setup.exe

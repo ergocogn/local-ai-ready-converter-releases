@@ -20,4 +20,4 @@ L'espace de soutien peut être masqué dans les Paramètres. Une annonce éventu
 
 Les **fichiers de sortie peuvent contenir les mêmes données sensibles** que leurs originaux, parfois sous une forme plus facile à lire ou à rechercher. Choisissez une destination appropriée, protégez vos sauvegardes et relisez les données importantes avant de les partager. Un document stocké dans un dossier synchronisé par OneDrive ou un service semblable reste soumis aux réglages de ce service ; l'application ne contrôle pas cette synchronisation.
 
-Le paquet incorpore des composants sous licences distinctes ; leurs droits et notices sont présentés dans [Composants tiers](COMPOSANTS_TIERS.md). La revue finale de redistribution est en cours avant publication.
+Le paquet incorpore des composants sous licences distinctes ; leurs droits, notices et sources requises sont décrits dans [Composants tiers](COMPOSANTS_TIERS.md) et livrés avec l'installateur.

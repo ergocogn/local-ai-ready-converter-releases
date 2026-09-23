@@ -20,4 +20,4 @@ You can hide the support area in Settings. Any future ad is an image bundled wit
 
 **Outputs may contain the same sensitive data** as originals, sometimes in an easier-to-read or search form. Choose a suitable destination, protect your backups and review important information before sharing it. Files stored in a folder synchronized by OneDrive or a similar service remain subject to that service's settings; the app does not control such syncing.
 
-The package includes separately licensed components; see [third-party components](COMPOSANTS_TIERS.en.md). Final redistribution review is ongoing before publication.
+The package includes separately licensed components; their notices and required sources are described under [third-party components](COMPOSANTS_TIERS.en.md) and shipped with the installer.

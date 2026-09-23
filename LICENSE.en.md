@@ -2,13 +2,13 @@
 
 [Version française — reference text](LICENSE.fr.md) · [Home](README.md)
 
-> Informational English translation of a draft prepared in a private distribution repository. Legal review and third-party compliance are required before publication. Do not treat this translation as an independently approved legal instrument.
+This is an informational English translation of the [French reference text](LICENSE.fr.md). It concerns the original application code; third-party components retain their own rights and terms, documented below and in the package.
 
 Publisher: ergoCogn sàrl.
 
 Copyright 2026, the holders of the rights to Local AI-Ready Converter. All rights reserved in the original application code.
 
-Free personal or professional use of the application is permitted. No right to commercially redistribute, modify or sublicense the proprietary code is granted, subject to mandatory rights under applicable law.
+The application may be used free of charge for personal or professional purposes. Free copying and sharing of the unmodified official installer, together with this licence and all third-party notices, are permitted. This permission does not grant any right to modify or sublicense the proprietary code or to sell the application, subject to mandatory rights under applicable law.
 
 The software is provided “as is”, without warranty, to the extent permitted by law.
 

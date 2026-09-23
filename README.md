@@ -14,7 +14,7 @@
   <img src="https://img.shields.io/badge/macOS-Coming_soon-d4d4d8?style=for-the-badge&amp;logo=apple&amp;logoColor=18181b" alt="macOS coming soon; no download yet">
 </p>
 
-> **Publication status:** this distribution-only repository is still private. A public Windows installer is not available here yet. The proprietary development source will not be published in this repository. Linux and macOS packages are planned after Windows, but are not available yet.
+> **Windows 0.3.1 is the first public release.** Download its installer from [Releases](../../releases). This repository contains distribution material, not the proprietary development source. Linux and macOS packages are planned, but are not available yet.
 
 ## A file you can read is not always a file you can reuse
 
@@ -47,11 +47,11 @@ This is not a replacement for every underlying converter. The app brings establi
 
 | Platform | Status |
 | --- | --- |
-| Windows 11 x64 | First public package planned; the installer is still undergoing final validation. |
+| Windows 11 x64 | Installer available from [Releases](../../releases). |
 | Linux | Native build and testing planned after Windows. |
 | macOS | Native build and testing planned after Linux. |
 
-Once approved and published, the Windows installer will be available under this repository's [Releases](../../releases). The [installation and update guide](docs/INSTALLATION.en.md) will then explain the graphical installation. **Do not mistake this private preview for an already-published download.** The bundled Windows build is intended to include its conversion tools and base OCR languages, so they need not be preinstalled.
+Get the Windows installer from [Releases](../../releases), check its [SHA-256 checksum](SHA256SUMS.txt), and follow the [installation and update guide](docs/INSTALLATION.en.md). The package includes its conversion tools and base OCR languages; you need not install them separately.
 
 ## Convert once. Reuse where it helps.
 
@@ -105,8 +105,8 @@ This is a working principle, **not a promise of a measured token or energy savin
 
 ## Help and support
 
-Once public, this repository's [Issues](../../issues) will be the place to report a problem; please never attach confidential documents. You can [give the project a GitHub star](../../), which is free. Financial support is optional through [Stripe](https://buy.stripe.com/8x214pgIZ7ho3vUftg1oI00) and is **not** needed to use the free application. Other payment buttons are hidden until their URLs are configured. The in-app support area can be hidden in Settings. See [support and announcements](docs/SOUTIEN.en.md).
+Use this repository's [Issues](../../issues) to report a problem; please never attach confidential documents. You can [give the project a GitHub star](../../), which is free. Financial support is optional through [Stripe](https://buy.stripe.com/8x214pgIZ7ho3vUftg1oI00) and is **not** needed to use the free application. Other payment buttons are hidden until their URLs are configured. The in-app support area can be hidden in Settings. See [support and announcements](docs/SOUTIEN.en.md).
 
-Local AI-Ready Converter is published by **ergoCogn sàrl**. This repository is for binary distribution, documentation, release notes and issue tracking; it does not publish the proprietary source. Read the [French reference licence](LICENSE.fr.md), its [English translation](LICENSE.en.md) and the [third-party component notices](docs/COMPOSANTS_TIERS.en.md). Public distribution remains subject to a final licence and clean-Windows review.
+Local AI-Ready Converter is published by **ergoCogn sàrl**. This repository is for binary distribution, documentation, release notes and issue tracking; it does not publish the proprietary source. Read the [French reference licence](LICENSE.fr.md), its [English translation](LICENSE.en.md) and the [third-party component notices](docs/COMPOSANTS_TIERS.en.md). The Windows setup was tested offline in a clean Windows Sandbox.
 
 <p align="center"><strong>Convert once. Reuse where it helps.</strong><br>🍃 Save tokens. Save energy. Use AI cleverly.</p>

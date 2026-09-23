@@ -7,4 +7,4 @@ Le code original de l'application est propriétaire et son utilisation est gratu
 
 The original application code is proprietary and free to use under the French terms. Third-party components retain their own licences. The English version is an informational translation.
 
-**Ces textes sont en cours de validation avant publication publique. / These texts are under review before public distribution.**
+Le texte français fait référence ; la version anglaise est une traduction d'information. / The French text is authoritative; the English version is an informational translation.

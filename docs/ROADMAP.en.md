@@ -2,12 +2,12 @@
 
 [Lire en français](ROADMAP.md) · [Home](../README.md)
 
-**Status, not a date promise.** Versions 0.1, 0.2 and 0.3 were development milestones; they do not imply that each had a public Release. The distribution repository is still private, and no public 0.3.1 installer has been published.
+**Status, not a date promise.** Versions 0.1, 0.2 and 0.3 were development milestones; Windows 0.3.1 is the first public Release. Linux and macOS are not distributed yet.
 
 ```mermaid
 flowchart TB
-  A["0.1–0.2<br/>local engine · OCR · batch"] --> B["0.3.1 candidate<br/>UI · walkthrough · per-file formats"]
-  B --> C["Windows validation<br/>licences · clean PC · exact package"]
+  A["0.1–0.2<br/>local engine · OCR · batch"] --> B["0.3.1 Windows<br/>UI · walkthrough · per-file formats"]
+  B --> C["Windows validation<br/>notices · offline Sandbox · exact package"]
   C --> D["Windows Release<br/>setup · notices · checksums"]
   D --> U["Real update test<br/>GitHub detection · download · upgrade"]
 
@@ -20,18 +20,18 @@ flowchart TB
   classDef done fill:#e9f5ef,stroke:#287451,color:#173f2e
   classDef active fill:#fff4dd,stroke:#a56b00,color:#553600
   classDef future fill:#f6f6f6,stroke:#666,color:#222
-  class A,B done
-  class C active
-  class D,U,L,M,Q,F,P,K,R future
+  class A,B,C,D done
+  class U active
+  class L,M,Q,F,P,K,R future
 ```
 
-**Green:** existing code and tests, not a public release. **Amber:** validation in progress. **Grey:** not published or not built. After Windows, platform builds and product evolution are independent branches: AI-ready/RAG must not delay Linux and macOS.
+**Green:** delivered and checked. **Amber:** validation in progress. **Grey:** not built yet. After Windows, platform builds and product evolution are independent branches: AI-ready/RAG must not delay Linux and macOS.
 
 | Stage | Actual status | Completion criterion |
 | --- | --- | --- |
 | **0.1–0.2 — foundation** | Conversion engine, OCR, batch handling, interface and initial destinations developed. | Historical milestones, not a current public offering. |
-| **0.3 / 0.3.1 — Windows candidate** | UI, walkthrough, per-file formats, session results, configurable links, test installer and an upgrade tried on the publisher's PC. Automated tests and demo conversions run. | Still needs a clean Windows test without preinstalled tools, third-party licence/notice review and validation of the exact package. |
-| **First Windows Release** | Not published. Separate private distribution repository; no proprietary source in it. | After approval only: installer, bilingual notes, required third-party notices/sources and checksums. Configure public distribution without exposing the development repository; set a concise repository description and relevant Topics. |
+| **0.3 / 0.3.1 — Windows** | UI, walkthrough, per-file formats, session results and configurable links. Automated tests and demo conversions run. | Setup was installed, tested with conversion/OCR and uninstalled in an offline Windows Sandbox. |
+| **First Windows Release** | 0.3.1 in a separate distribution repository, without proprietary source. | Installer, bilingual notes, third-party notices and sources, checksum. The development repository remains private. |
 | **Update verification** | Version comparison, dialog and verified download tested with simulated GitHub responses; no live public Release test yet. | From an older version, detect the public Release, download the matching setup, verify size and SHA-256, reveal it in Explorer, and perform a manual upgrade. Also test “current” and offline behavior. |
 | **Linux** | Python engine is largely reusable; no Linux package validated. | Build on Linux with bundled dependencies and suitable pywebview backend; test conversion/OCR and installation on a clean system. Check Linux download links and update strategy. |
 | **macOS** | No macOS package validated. | Build on macOS with compatible tools; handle signing/notarization if required for the chosen distribution route; test UI and conversion/OCR on a clean machine. Verify its update route. |
