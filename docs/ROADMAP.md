@@ -2,7 +2,7 @@
 
 [Read in English](ROADMAP.en.md) · [Accueil](../README.fr.md)
 
-**État, pas promesse de date.** Les numéros 0.1, 0.2 et 0.3 sont des jalons de développement. Windows 0.3.1 a été la première Release publique ; la version 0.3.2 est maintenant empaquetée pour Windows et Linux. macOS vient ensuite.
+**État, pas promesse de date.** Les numéros 0.1, 0.2 et 0.3 sont des jalons de développement. Windows 0.3.1 a été la première Release publique ; la version 0.3.2 est maintenant empaquetée pour Windows et Linux. macOS reste prévu ; les prochains chantiers annoncés sont la qualité des sorties, puis la structure AI-ready et l'interopérabilité locale.
 
 ```mermaid
 flowchart TB
@@ -26,7 +26,7 @@ flowchart TB
   class M,Q,F,P,K,R futur
 ```
 
-**Vert :** réalisé et vérifié. **Ambre :** validation en cours. **Gris :** pas encore réalisé. Après Windows, le portage et l'évolution fonctionnelle sont deux branches indépendantes : AI-ready/RAG ne doivent pas retarder Linux et macOS.
+**Vert :** réalisé et vérifié. **Ambre :** validation en cours. **Gris :** pas encore réalisé. Après les plateformes Windows et Linux, les prochains chantiers annoncés sont la qualité des sorties, puis le dossier AI-ready et l'interopérabilité locale. macOS reste prévu, sans ordre de passage annoncé : le portage suit son propre rythme et ne conditionne pas ces chantiers.
 
 | Étape | État réel | Pour la considérer terminée |
 | --- | --- | --- |
@@ -35,7 +35,7 @@ flowchart TB
 | **Première Release Windows** | 0.3.1 dans le dépôt de distribution séparé, sans code propriétaire. | Installer, notes bilingues, notices et sources tierces, empreinte de contrôle. Le dépôt de développement reste privé. |
 | **Vérification des mises à jour** | Windows a réalisé une vraie mise à niveau de 0.3.1 vers 0.3.2. Linux 0.3.2 reconnaît la Release publique ainsi que le nom, la taille et le SHA-256 exacts de son AppImage ; les erreurs/hors-ligne et le droit d'exécution sont couverts par les tests automatisés. | Le mécanisme est livré. Une vraie mise à niveau Linux entre deux AppImages exige la prochaine Release Linux, puisqu'il n'existe aucun paquet Linux antérieur. |
 | **Linux 0.3.2** | AppImage x86_64 native construite avec outils intégrés et runtime statique ; conversions, OCR, PDF recherchable et fenêtre PySide6/Qt validés sur une VM Ubuntu Desktop 24.04 propre. | Paquet publié, empreinte et instructions bilingues. Le téléchargement/mise à jour est couvert par les tests automatisés ; un essai réel entre deux versions Linux sera fait à la prochaine Release. |
-| **macOS** | Aucun paquet macOS validé. | Construire sur macOS avec outils compatibles, signature/notarisation si nécessaires au mode de distribution retenu, interface et conversions/OCR testées sur machine propre. Vérifier sa méthode de mise à jour. |
+| **macOS** | Aucun paquet macOS validé. Prévu, sans ordre de passage annoncé. | Construire sur macOS avec outils compatibles, signature/notarisation si nécessaires au mode de distribution retenu, interface et conversions/OCR testées sur machine propre. Vérifier sa méthode de mise à jour. |
 | **Qualité / futur cycle 0.4** | Envisagé, non promis pour la première Release. | Mieux guider les erreurs, améliorer tableaux/PDF complexes et JSON tabulaire compact, expliciter un éventuel mode de choix automatique des sorties, puis tester chaque règle. |
 | **Structure AI-ready** | Pas encore implémentée. | Dossier stable, identifiant de document, manifest JSON versionné, provenance, sorties produites, OCR/langue, format source et organisation des assets. |
 | **Interopérabilité locale** | Pas encore implémentée. | API et/ou MCP activés explicitement pour lister les documents, récupérer TXT/Markdown/JSON et connaître les conversions déjà faites, sans OCR répété. Permissions et aucun partage réseau par défaut. |

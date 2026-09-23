@@ -11,10 +11,10 @@
 <p align="center">
   <a href="../../releases"><img src="docs/assets/windows-releases.svg" alt="Releases Windows 11 x64"></a>
   <a href="../../releases"><img src="https://img.shields.io/badge/Linux-0.3.2-18181b?style=for-the-badge&amp;logo=linux&amp;logoColor=white" alt="Linux 0.3.2 AppImage"></a>
-  <img src="https://img.shields.io/badge/macOS-Bient%C3%B4t-d4d4d8?style=for-the-badge&amp;logo=apple&amp;logoColor=18181b" alt="macOS bientôt ; aucun téléchargement pour le moment">
+  <img src="https://img.shields.io/badge/macOS-Pr%C3%A9vu-d4d4d8?style=for-the-badge&amp;logo=apple&amp;logoColor=18181b" alt="macOS prévu ; aucun téléchargement pour le moment">
 </p>
 
-> **La version 0.3.2 est disponible pour Windows 11 x64 et Linux x86_64.** Elle comprend l’arrêt immédiat et une gestion plus sûre des fichiers cloud disponibles uniquement en ligne. Téléchargez le paquet natif dans les [Releases](../../releases). Ce dépôt contient la distribution, pas le code source propriétaire de développement. macOS est la prochaine plateforme prévue.
+> **La version 0.3.2 est disponible pour Windows 11 x64 et Linux x86_64.** Elle comprend l’arrêt immédiat et une gestion plus sûre des fichiers cloud disponibles uniquement en ligne. Téléchargez le paquet natif dans les [Releases](../../releases). Ce dépôt contient la distribution, pas le code source propriétaire de développement. macOS reste prévu, sans ordre de passage annoncé.
 
 ## Un fichier lisible n'est pas toujours facile à réutiliser
 
@@ -49,7 +49,7 @@ L'application ne prétend pas remplacer tous les convertisseurs sous-jacents. El
 | --- | --- |
 | Windows 11 x64 | Installateur disponible dans les [Releases](../../releases). |
 | Linux x86_64 | AppImage autonome disponible dans les [Releases](../../releases), validée sur une VM Ubuntu Desktop 24.04 propre. |
-| macOS | Construction et tests natifs prévus après Linux. |
+| macOS | Prévu ; aucun paquet validé à ce jour. |
 
 Téléchargez l'installateur Windows ou l'AppImage Linux dans les [Releases](../../releases), vérifiez son [empreinte SHA-256](SHA256SUMS.txt), puis suivez le [guide d'installation et de mise à jour](docs/INSTALLATION.md). Les deux paquets embarquent leurs outils de conversion et leurs langues OCR de base : vous n'avez pas à installer séparément Python, Tesseract ou libfuse2.
 

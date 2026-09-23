@@ -11,10 +11,10 @@
 <p align="center">
   <a href="../../releases"><img src="docs/assets/windows-releases.svg" alt="Windows 11 x64 releases"></a>
   <a href="../../releases"><img src="https://img.shields.io/badge/Linux-0.3.2-18181b?style=for-the-badge&amp;logo=linux&amp;logoColor=white" alt="Linux 0.3.2 AppImage"></a>
-  <img src="https://img.shields.io/badge/macOS-Coming_soon-d4d4d8?style=for-the-badge&amp;logo=apple&amp;logoColor=18181b" alt="macOS coming soon; no download yet">
+  <img src="https://img.shields.io/badge/macOS-Planned-d4d4d8?style=for-the-badge&amp;logo=apple&amp;logoColor=18181b" alt="macOS planned; no download yet">
 </p>
 
-> **Version 0.3.2 is available for Windows 11 x64 and Linux x86_64.** It includes immediate cancellation and safer handling of online-only cloud files. Download the native package from [Releases](../../releases). This repository contains distribution material, not the proprietary development source. macOS is planned next.
+> **Version 0.3.2 is available for Windows 11 x64 and Linux x86_64.** It includes immediate cancellation and safer handling of online-only cloud files. Download the native package from [Releases](../../releases). This repository contains distribution material, not the proprietary development source. macOS remains planned, with no announced order of passage.
 
 ## A file you can read is not always a file you can reuse
 
@@ -49,7 +49,7 @@ This is not a replacement for every underlying converter. The app brings establi
 | --- | --- |
 | Windows 11 x64 | Installer available from [Releases](../../releases). |
 | Linux x86_64 | Self-contained AppImage available from [Releases](../../releases), validated on a clean Ubuntu Desktop 24.04 VM. |
-| macOS | Native build and testing planned after Linux. |
+| macOS | Planned; no package validated so far. |
 
 Get the Windows installer or Linux AppImage from [Releases](../../releases), check its [SHA-256 checksum](SHA256SUMS.txt), and follow the [installation and update guide](docs/INSTALLATION.en.md). Both packages include their conversion tools and base OCR languages; you need not install Python, Tesseract or libfuse2 separately.
 
