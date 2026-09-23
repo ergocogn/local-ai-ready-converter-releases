@@ -9,7 +9,7 @@
 <p align="center"><a href="README.fr.md">Lire en français</a></p>
 
 <p align="center">
-  <a href="../../releases"><img src="https://img.shields.io/badge/Windows_11_x64-Releases-18181b?style=for-the-badge&amp;logo=windows11&amp;logoColor=white" alt="Windows 11 x64 releases"></a>
+  <a href="../../releases"><img src="docs/assets/windows-releases.svg" alt="Windows 11 x64 releases"></a>
   <img src="https://img.shields.io/badge/Linux-Coming_soon-d4d4d8?style=for-the-badge&amp;logo=linux&amp;logoColor=18181b" alt="Linux coming soon; no download yet">
   <img src="https://img.shields.io/badge/macOS-Coming_soon-d4d4d8?style=for-the-badge&amp;logo=apple&amp;logoColor=18181b" alt="macOS coming soon; no download yet">
 </p>
@@ -19,6 +19,8 @@
 ## A file you can read is not always a file you can reuse
 
 A PDF invoice, a scanned letter, a Word report and an Excel workbook were made primarily for people to view. A script, a document search tool or an AI assistant often needs extracted text or structured data instead. Local AI-Ready Converter handles that preparation through a desktop interface: add files or folders, select compatible output formats, convert, and open the results in Explorer. **Your original documents are not modified.**
+
+In practical terms, this is a **local document converter for PDF OCR, PDF to text/Markdown/JSON, DOCX to Markdown, XLSX to CSV/JSON, and image OCR**. It brings these jobs together in one graphical batch workflow.
 
 No Python, Pandoc or Tesseract installation is required separately for the intended Windows package. You do not need an account or a command line to use the application. Conversion runs on your computer; document contents are not sent to an ergoCogn conversion service.
 
@@ -36,6 +38,10 @@ No Python, Pandoc or Tesseract installation is required separately for the inten
 - **Keep your options open.** Use the outputs with a local AI, an online AI *if you choose to send them*, a script, a knowledge base or no AI at all.
 
 This app prepares documents; **it does not include a generative AI model, semantic search, a local API/MCP server or RAG today.** The [roadmap](docs/ROADMAP.en.md) distinguishes these later stages from what already works.
+
+## Proven tools, one visual workflow
+
+This is not a replacement for every underlying converter. The app brings established tools together, handles files and destinations, runs batch jobs and presents the outputs without requiring the user to operate each tool separately. **Pandoc** handles DOCX conversion; **Tesseract** and **OCRmyPDF** provide OCR and searchable PDFs; **pypdf** extracts text from text PDFs; **openpyxl** reads Excel workbooks. The Windows interface uses **pywebview and Microsoft WebView2**. These components keep their own licences and conditions: see the [third-party component summary](docs/COMPOSANTS_TIERS.en.md).
 
 ## Download and availability
 
@@ -87,7 +93,7 @@ Reading documents, OCR and writing converted files happen on your machine. There
 
 This is a working principle, **not a promise of a measured token or energy saving for every file**.
 
-**Save tokens:** give an AI only the relevant sheet, pages or passages when possible. A CSV for one spreadsheet sheet may be far smaller than a verbose workbook JSON. Extracting text first makes it easier for a later tool to select what matters, but the actual token count depends on the model and representation.
+**Save tokens:** sending a whole PDF directly to a model API can be expensive in context. For example, [OpenAI's PDF file-input processing](https://developers.openai.com/api/docs/guides/file-inputs) may include both extracted text **and page images**. If your task only needs the words, sending the locally extracted TXT—or just the relevant pages—instead can substantially reduce the material processed and the associated input-token cost. A CSV for one spreadsheet sheet can likewise be much smaller than a verbose workbook JSON. Keep the original PDF when page images, layout or charts are essential. The actual saving depends on the document, model and API; the app does not measure or guarantee a percentage.
 
 **Save energy:** keep and reuse a suitable conversion instead of rerunning extraction or OCR for every later question. A single file may yield a tiny difference; repeated processing across a collection may matter more. The app does not claim a quantified environmental benefit.
 
@@ -101,6 +107,6 @@ This is a working principle, **not a promise of a measured token or energy savin
 
 Once public, this repository's [Issues](../../issues) will be the place to report a problem; please never attach confidential documents. You can [give the project a GitHub star](../../), which is free. Financial support is optional through [Stripe](https://buy.stripe.com/8x214pgIZ7ho3vUftg1oI00) and is **not** needed to use the free application. Other payment buttons are hidden until their URLs are configured. The in-app support area can be hidden in Settings. See [support and announcements](docs/SOUTIEN.en.md).
 
-Local AI-Ready Converter is published by **ergoCogn sàrl**. This repository is for binary distribution, documentation, release notes and issue tracking; it does not publish the proprietary source. Read the [product licence](LICENSE.en.md) and [third-party component notices](docs/COMPOSANTS_TIERS.en.md). Public distribution remains subject to a final licence and clean-Windows review.
+Local AI-Ready Converter is published by **ergoCogn sàrl**. This repository is for binary distribution, documentation, release notes and issue tracking; it does not publish the proprietary source. Read the [French reference licence](LICENSE.fr.md), its [English translation](LICENSE.en.md) and the [third-party component notices](docs/COMPOSANTS_TIERS.en.md). Public distribution remains subject to a final licence and clean-Windows review.
 
 <p align="center"><strong>Convert once. Reuse where it helps.</strong><br>🍃 Save tokens. Save energy. Use AI cleverly.</p>

@@ -1,6 +1,6 @@
 # Local AI-Ready Converter — proprietary / freeware licence
 
-[Version française](LICENSE.md) · [Home](README.md)
+[Version française — reference text](LICENSE.fr.md) · [Home](README.md)
 
 > Informational English translation of a draft prepared in a private distribution repository. Legal review and third-party compliance are required before publication. Do not treat this translation as an independently approved legal instrument.
 

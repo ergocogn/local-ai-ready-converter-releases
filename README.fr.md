@@ -9,7 +9,7 @@
 <p align="center"><a href="README.md">Read in English</a></p>
 
 <p align="center">
-  <a href="../../releases"><img src="https://img.shields.io/badge/Windows_11_x64-Releases-18181b?style=for-the-badge&amp;logo=windows11&amp;logoColor=white" alt="Releases Windows 11 x64"></a>
+  <a href="../../releases"><img src="docs/assets/windows-releases.svg" alt="Releases Windows 11 x64"></a>
   <img src="https://img.shields.io/badge/Linux-Bient%C3%B4t-d4d4d8?style=for-the-badge&amp;logo=linux&amp;logoColor=18181b" alt="Linux bientôt ; aucun téléchargement pour le moment">
   <img src="https://img.shields.io/badge/macOS-Bient%C3%B4t-d4d4d8?style=for-the-badge&amp;logo=apple&amp;logoColor=18181b" alt="macOS bientôt ; aucun téléchargement pour le moment">
 </p>
@@ -19,6 +19,8 @@
 ## Un fichier lisible n'est pas toujours facile à réutiliser
 
 Une facture PDF, une lettre numérisée, un rapport Word ou un classeur Excel ont d'abord été conçus pour être consultés par des humains. Un script, un outil de recherche documentaire ou un assistant IA a souvent plutôt besoin de texte extrait ou de données structurées. Local AI-Ready Converter prépare cela dans une interface de bureau : ajoutez des fichiers ou dossiers, sélectionnez les sorties compatibles, convertissez et retrouvez les résultats dans l'Explorateur. **Les originaux ne sont pas modifiés.**
+
+Concrètement, c'est un **convertisseur local de documents : OCR des PDF et des images, PDF vers texte/Markdown/JSON, DOCX vers Markdown, XLSX vers CSV/JSON**. L'application rassemble ces opérations dans un parcours graphique de conversion par lot.
 
 Le paquet Windows visé n'exige pas l'installation séparée de Python, Pandoc ou Tesseract. Pas besoin de compte ni de ligne de commande pour utiliser l'application. La conversion se fait sur votre ordinateur ; le contenu des documents n'est pas envoyé à un service de conversion ergoCogn.
 
@@ -36,6 +38,10 @@ Le paquet Windows visé n'exige pas l'installation séparée de Python, Pandoc o
 - **Rester libre.** Utiliser les sorties avec une IA locale, une IA en ligne *si vous décidez de les lui transmettre*, un script, une base documentaire ou sans IA du tout.
 
 L'application **prépare les documents** : elle n'embarque aujourd'hui ni modèle d'IA générative, ni recherche sémantique, ni serveur API/MCP local, ni RAG. La [feuille de route](docs/ROADMAP.md) distingue ces évolutions de ce qui fonctionne déjà.
+
+## Des outils éprouvés, un seul parcours visuel
+
+L'application ne prétend pas remplacer tous les convertisseurs sous-jacents. Elle les rassemble, gère les fichiers et les destinations, lance les lots et présente les résultats sans demander à chacun de manipuler ces outils séparément. **Pandoc** convertit les DOCX ; **Tesseract** et **OCRmyPDF** assurent l'OCR et les PDF recherchables ; **pypdf** extrait le texte des PDF textuels ; **openpyxl** lit les classeurs Excel. L'interface Windows utilise **pywebview et Microsoft WebView2**. Chaque composant conserve sa licence et ses conditions : voir les [composants tiers](docs/COMPOSANTS_TIERS.md).
 
 ## Téléchargement et disponibilité
 
@@ -87,7 +93,7 @@ La lecture, l'OCR et l'écriture des sorties ont lieu sur votre machine. Il n'es
 
 C'est un principe de travail, **pas la promesse d'une économie mesurée de tokens ou d'énergie pour chaque fichier**.
 
-**Save tokens :** transmettez à une IA seulement la feuille, les pages ou les passages pertinents quand c'est possible. Le CSV d'une feuille Excel peut être bien plus léger qu'un JSON de classeur verbeux. Extraire le texte d'abord permet à un outil ultérieur de sélectionner l'essentiel, mais le nombre réel de tokens dépend du modèle et de la représentation.
+**Save tokens :** envoyer un PDF entier à une API de modèle peut coûter cher en contexte. Par exemple, le [traitement des PDF par l'API d'OpenAI](https://developers.openai.com/api/docs/guides/file-inputs) peut inclure à la fois le texte extrait **et les images des pages**. Si votre question porte seulement sur les mots, envoyer à la place le TXT extrait localement — ou les seules pages utiles — peut réduire nettement le contenu traité et le coût en tokens d'entrée. Le CSV d'une seule feuille Excel peut, lui aussi, être beaucoup plus léger qu'un JSON verbeux. Gardez le PDF original lorsque les images, la mise en page ou les graphiques comptent. Le gain réel dépend du document, du modèle et de l'API ; l'application ne calcule ni ne garantit un pourcentage.
 
 **Save energy :** conservez et réutilisez une conversion adaptée au lieu de recommencer l'extraction ou l'OCR pour chaque question. La différence sur un fichier peut être minime ; sur un ensemble traité de manière répétée, la logique devient plus intéressante. L'application ne revendique aucun bénéfice environnemental chiffré.
 
@@ -101,6 +107,6 @@ C'est un principe de travail, **pas la promesse d'une économie mesurée de toke
 
 Après ouverture du dépôt au public, ses [Issues](../../issues) permettront de signaler un problème ; n'y joignez jamais de document confidentiel. Vous pouvez [donner une étoile GitHub au projet](../../) gratuitement. Le soutien financier est facultatif via [Stripe](https://buy.stripe.com/8x214pgIZ7ho3vUftg1oI00) et n'est **pas** nécessaire pour utiliser l'application gratuite. Les autres boutons de paiement restent masqués tant que leurs URL ne sont pas configurées. L'espace de soutien dans l'application peut être masqué dans les Paramètres. Voir la [page soutien et annonces](docs/SOUTIEN.md).
 
-Local AI-Ready Converter est édité par **ergoCogn sàrl**. Ce dépôt sert à la distribution des exécutables, à la documentation, aux notes de version et au suivi des problèmes ; il ne publie pas le code source propriétaire. Voir la [licence du produit](LICENSE.md) et les [notices des composants tiers](docs/COMPOSANTS_TIERS.md). La publication publique attend encore la revue finale des licences et un test sur Windows propre.
+Local AI-Ready Converter est édité par **ergoCogn sàrl**. Ce dépôt sert à la distribution des exécutables, à la documentation, aux notes de version et au suivi des problèmes ; il ne publie pas le code source propriétaire. Voir la [licence française du produit](LICENSE.fr.md), sa [traduction anglaise](LICENSE.en.md) et les [notices des composants tiers](docs/COMPOSANTS_TIERS.md). La publication publique attend encore la revue finale des licences et un test sur Windows propre.
 
 <p align="center"><strong>Convertir une fois. Réutiliser quand c'est utile.</strong><br>🍃 Save tokens. Save energy. Use AI cleverly.</p>

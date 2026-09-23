@@ -10,7 +10,9 @@ Un PDF scanné peut être une image sans texte sélectionnable. Un classeur peut
 
 ## « Save tokens » : moins de contexte inutile, pas de magie
 
-Un *token* est une unité de texte traitée par un modèle de langage. Le coût, la vitesse et la place disponible dans son contexte dépendent en partie du nombre de tokens qu'on lui fournit. Si vous n'avez besoin que du texte d'une facture, un TXT extrait peut être plus direct qu'un gros objet JSON ou que des pages et métadonnées inutiles. Pour un tableur, un CSV par feuille peut être bien plus compact qu'un JSON détaillant chaque cellule vide. À l'inverse, le JSON est utile si vous devez garder les pages d'un PDF, les formules ou une structure précise.
+Un *token* est une unité traitée par un modèle de langage. Le coût, la vitesse et la place disponible dans son contexte dépendent en partie du nombre de tokens qu'on lui fournit. **Le cas du PDF envoyé directement à une API est concret :** [l'API d'OpenAI peut intégrer à son entrée le texte extrait et les images des pages](https://developers.openai.com/api/docs/guides/file-inputs). Si vous voulez seulement rechercher un montant ou résumer le texte, extraire localement le TXT puis n'envoyer que le passage utile peut réduire nettement le contexte et son coût. Ce n'est pas équivalent lorsque l'IA doit voir la mise en page, une image ou un graphique.
+
+Pour un tableur, le CSV d'une seule feuille peut être bien plus compact qu'un JSON détaillant chaque cellule vide. À l'inverse, le JSON est utile si vous devez garder les pages d'un PDF, les formules ou une structure précise.
 
 **Exemple concret :** convertissez un classeur en CSV et JSON. Pour demander à un agent « quelles lignes correspondent au produit X ? », transmettez seulement la feuille CSV concernée. Pour auditer une formule, reprenez le JSON. Vous choisissez la représentation en fonction de la question — il n'y a pas de format « IA » universel.
 

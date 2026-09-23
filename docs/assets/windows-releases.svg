@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="226" height="28" viewBox="0 0 226 28" role="img" aria-label="Windows 11 x64: Releases">
+  <title>Windows 11 x64: Releases</title>
+  <rect width="226" height="28" rx="4" fill="#18181b"/>
+  <g fill="#fff">
+    <rect x="11" y="7" width="6" height="6"/><rect x="18" y="7" width="6" height="6"/>
+    <rect x="11" y="14" width="6" height="6"/><rect x="18" y="14" width="6" height="6"/>
+  </g>
+  <text x="33" y="18" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700">WINDOWS 11 X64</text>
+  <path d="M146 6v16" stroke="#75757b"/>
+  <text x="157" y="18" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700">RELEASES</text>
+</svg>

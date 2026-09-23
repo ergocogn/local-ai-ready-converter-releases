@@ -10,7 +10,9 @@ A scanned PDF may be an image with no selectable text. A spreadsheet may contain
 
 ## “Save tokens”: less irrelevant context, not magic
 
-A *token* is a unit of text processed by a language model. Cost, speed and available context partly depend on how many tokens you send. If all you need is the text of an invoice, extracted TXT may be more direct than a large JSON object or unnecessary pages and metadata. For a spreadsheet, one CSV per sheet may be much smaller than JSON describing every empty cell. Conversely, JSON can be useful when page numbers, formulas or detailed structure matter.
+A *token* is a unit processed by a language model. Cost, speed and available context partly depend on how many tokens you send. **Sending a PDF directly to an API is a concrete case:** [OpenAI's API can include both extracted text and page images in its PDF input](https://developers.openai.com/api/docs/guides/file-inputs). If you only need to find an amount or summarize text, extracting TXT locally and sending just the useful passage can substantially reduce context and its cost. That is not equivalent when the AI needs to see layout, an image or a chart.
+
+For a spreadsheet, one sheet's CSV may be much smaller than JSON describing every empty cell. Conversely, JSON can be useful when page numbers, formulas or detailed structure matter.
 
 **A practical example:** convert a workbook to CSV and JSON. To ask an agent “which rows match product X?”, send only the relevant CSV sheet. To audit a formula, use the JSON. Choose the representation for the question; there is no universal “AI format”.
 

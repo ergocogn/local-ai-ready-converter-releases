@@ -1,15 +1,10 @@
-# Local AI-Ready Converter — licence propriétaire / freeware
+# Local AI-Ready Converter — licence / licence
 
-[English translation](LICENSE.en.md) · [Accueil](README.fr.md)
+- [Licence en français — texte de référence](LICENSE.fr.md)
+- [English licence — informational translation](LICENSE.en.md)
 
-> Texte de travail pour la préparation privée de la distribution. Validation juridique et conformité des composants tiers requises avant toute publication.
+Le code original de l'application est propriétaire et son utilisation est gratuite, sous les conditions du texte français. Les composants tiers conservent leurs propres licences.
 
-Éditeur : ergoCogn sàrl.
+The original application code is proprietary and free to use under the French terms. Third-party components retain their own licences. The English version is an informational translation.
 
-Copyright 2026, les titulaires des droits sur Local AI-Ready Converter. Tous droits réservés sur le code original de l'application.
-
-L'utilisation gratuite, personnelle ou professionnelle, de l'application est autorisée. Aucun droit de redistribution commerciale, de modification ou de sous-licence du code propriétaire n'est accordé, sous réserve des droits impératifs prévus par la loi applicable.
-
-Le logiciel est fourni en l'état, sans garantie, dans les limites autorisées par la loi.
-
-Les composants tiers conservent **leurs propres licences et droits**. Cette licence ne restreint aucun droit accordé par ces licences, notamment la modification, le remplacement et l'ingénierie inverse nécessaires au débogage de composants sous LGPL. Le paquet installé contient les notices et textes tiers dans `_internal/licenses/distribution/`. Voir également [Composants tiers](docs/COMPOSANTS_TIERS.md) et [Confidentialité](docs/CONFIDENTIALITE.md).
+**Ces textes sont en cours de validation avant publication publique. / These texts are under review before public distribution.**
