@@ -2,7 +2,7 @@
 
 [Lire en français](ROADMAP.md) · [Home](../README.md)
 
-**Status, not a date promise.** Versions 0.1, 0.2 and 0.3 were development milestones. Windows 0.3.1 was the first public Release; version 0.3.2 is now packaged for Windows and Linux. macOS remains planned; the announced next work is output quality, then AI-ready structure and local interoperability.
+**Status, not a date promise.** Versions 0.1, 0.2 and 0.3 were development milestones. Windows 0.3.1 was the first public Release; version 0.3.3 is published for Windows and Linux. It improves the structure of image conversions. macOS remains planned; the announced next work is output quality, then AI-ready structure and local interoperability.
 
 ```mermaid
 flowchart TB
@@ -11,9 +11,10 @@ flowchart TB
   C --> D["Windows Release<br/>setup · notices · checksums"]
   D --> U["Windows live update<br/>GitHub detection · verified download · upgrade"]
 
-  D --> L["Linux 0.3.2<br/>native tools · AppImage · clean-VM tests"] --> UL["Linux cross-version update<br/>next Release"]
+  D --> L["Linux 0.3.2<br/>native tools · AppImage · clean-VM tests"] --> S["Images 0.3.3<br/>logical structure · JSON/Markdown/TXT"]
+  S --> UL["Linux 0.3.2 → 0.3.3 update<br/>live test pending"]
   L --> M["macOS<br/>native tools · build · tests"]
-  D --> Q["Output quality<br/>PDF/tables · errors · possible auto choice"]
+  S --> Q["Output quality<br/>PDF/tables · errors · possible auto choice"]
   Q --> F["AI-ready folder<br/>ID · manifest · metadata · assets"]
   F --> P["Local interoperability<br/>API/MCP · permissions · reuse"]
   P --> K["Local retrieval<br/>chunks · embeddings · index"] --> R["Local RAG<br/>sourced passages · answers"]
@@ -21,7 +22,7 @@ flowchart TB
   classDef done fill:#e9f5ef,stroke:#287451,color:#173f2e
   classDef active fill:#fff4dd,stroke:#a56b00,color:#553600
   classDef future fill:#f6f6f6,stroke:#666,color:#222
-  class A,B,C,D,U,L done
+  class A,B,C,D,U,L,S done
   class UL active
   class M,Q,F,P,K,R future
 ```
@@ -33,8 +34,9 @@ flowchart TB
 | **0.1–0.2 — foundation** | Conversion engine, OCR, batch handling, interface and initial destinations developed. | Historical milestones, not a current public offering. |
 | **0.3 / 0.3.1 — Windows** | UI, walkthrough, per-file formats, session results and configurable links. Automated tests and demo conversions run. | Setup was installed, tested with conversion/OCR and uninstalled in an offline Windows Sandbox. |
 | **First Windows Release** | 0.3.1 in a separate distribution repository, without proprietary source. | Installer, bilingual notes, third-party notices and sources, checksum. The development repository remains private. |
-| **Update verification** | Windows completed a real upgrade from 0.3.1 to 0.3.2. Linux 0.3.2 recognizes the public Release and its exact AppImage name, size and SHA-256; offline/error cases and executable permission are covered by automated tests. | The mechanism is delivered. A live Linux upgrade between two AppImages requires the next Linux Release because no older Linux package exists. |
-| **Linux 0.3.2** | Native x86_64 AppImage built with bundled tools and a static runtime; conversions, OCR, searchable PDF and the PySide6/Qt window passed on a clean Ubuntu Desktop 24.04 VM. | Published package, checksum and bilingual instructions. The download/update path is covered by automated tests and will receive a live cross-version test with the next Linux release. |
+| **Update verification** | Windows completed a real upgrade from 0.3.1 to 0.3.2. On Linux, detection, download verification and error cases are covered by automated tests. | The mechanism is delivered. AppImages 0.3.2 and 0.3.3 are available for a live Linux upgrade test, which remains pending. |
+| **Linux 0.3.2–0.3.3** | Native x86_64 AppImages are published. Conversions, OCR, searchable PDF and the PySide6/Qt window passed on Ubuntu Desktop 24.04; the 0.3.3 package passed direct package and UI checks. | Packages, checksums and bilingual instructions are published. A live update between the two versions remains to be tested. |
+| **Images 0.3.3 — logical structure** | Generic ordered JSON blocks represent clear headings, lists, label/value associations, selected controls and ruled tables; Markdown and TXT also use the structure. Plain OCR remains the fallback when the structure is uncertain. | Shipped for Windows and Linux. CSV keeps its existing behavior: no artificial table is created for a non-tabular image. |
 | **macOS** | No macOS package validated. Planned, with no announced order of passage. | Build on macOS with compatible tools; handle signing/notarization if required for the chosen distribution route; test UI and conversion/OCR on a clean machine. Verify its update route. |
 | **Quality / possible 0.4 cycle** | Intended, not promised for the first Release. | Better errors, complex tables/PDFs and compact tabular JSON; define any automatic-output mode explicitly, then test its rules. |
 | **AI-ready structure** | Not implemented yet. | Stable folder, document ID, versioned JSON manifest, provenance, produced files, OCR/language, source format and organized assets. |
