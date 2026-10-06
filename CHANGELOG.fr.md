@@ -9,6 +9,8 @@
 - Utilisation des structures fiables en Markdown et TXT ; repli sur le texte OCR si la disposition est incertaine.
 - CSV reste indisponible pour les images ; les autres formats d'entrée conservent leurs sorties.
 
+**Mise à jour du paquet 0.3.3 — 6 octobre 2026 :** l'installateur Windows a été reconstruit sans changer de numéro. Cette révision récupère plus prudemment le début des textes clairs sur fond sombre, empêche les lignes techniques TSV de contaminer les sorties, rattache les annotations intercalées aux éléments visuels et ajoute au JSON les observations génériques `selected` et `highlighted` tout en conservant le champ `state`. Markdown garde son rendu existant et TXT bénéficie de séparations et d'indentations plus stables. L'AppImage Linux publiée sous le même numéro n'est pas remplacée par cette mise à jour Windows.
+
 L'OCR et le regroupement visuel restent approximatifs. Vérifiez les valeurs et relations importantes sur l'image originale.
 
 Le **JSON des images est la principale amélioration** : `pages[].blocks` représente les éléments dans l'ordre de lecture, avec des types génériques, des éléments imbriqués, des associations libellé/valeur et des états visuels lorsqu'ils sont détectés avec suffisamment de confiance. Les champs OCR `text` et `pages[].text` restent disponibles. Ce JSON décrit la structure visible de chaque image ; il ne constitue pas encore un manifest AI-ready pour toute la bibliothèque de documents.

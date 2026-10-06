@@ -1,5 +1,5 @@
 d664ec647ddd0ec58459da7ced8ea9e5353959b16cc14c5f2744b2a85cd11dba  LocalAIReadyConverter-0.3.1-Setup.exe
 afd6c223e15df8fca3efd79b2664058b2d1739bbd9c0dc6528b1f71fd2bc6c76  LocalAIReadyConverter-0.3.2-Setup.exe
 1f63d6bd82d387deead5b669fbdce21373819f3503ba2509b78f9bab4155ac24  LocalAIReadyConverter-0.3.2-Linux-x86_64.AppImage
-7742920b2e346a66ca0ea0bad3b97d2ac714c738004d53833afae4cb22e5c6d2  LocalAIReadyConverter-0.3.3-Setup.exe
+e50b3056bacc1d1bcbcdc104b33a012e075974a4ab74ea2f27f3ab60fabe714a  LocalAIReadyConverter-0.3.3-Setup.exe
 d6b747ee3adeb0b9e07828f561f85fb713b3564b7bdc9e7885fea336b8b97162  LocalAIReadyConverter-0.3.3-Linux-x86_64.AppImage
