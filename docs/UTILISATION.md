@@ -24,6 +24,8 @@ Les originaux restent intacts. Vérifiez l'espace disponible et les droits d'éc
 
 L'OCR reconnaît le texte des images et des PDF scannés. Le PDF OCR produit un nouveau PDF recherchable ; il peut être choisi seul. Les langues de reconnaissance se règlent dans **Paramètres**. Les langues de base sont embarquées ; des modèles supplémentaires peuvent être importés ou téléchargés à la demande.
 
+Pour les images, le JSON conserve le texte OCR et ajoute `pages[].blocks` : des blocs ordonnés avec rôle, texte, position et éventuels éléments enfants ou états visuels clairement détectés. Markdown et TXT utilisent cette structure lorsqu'elle est fiable. Les tableaux à grille visible peuvent être reconstruits dans JSON et Markdown ; CSV n'est pas proposé pour les images. En cas d'incertitude, le convertisseur garde une sortie textuelle simple.
+
 ## Choisir une sortie pour une IA
 
 Pour un PDF, TXT est souvent le plus léger ; JSON ajoute notamment la séparation par page. Pour un classeur Excel tabulaire, les CSV par feuille sont généralement plus compacts que le JSON détaillé. Ce dernier garde davantage de structure et les formules. Une formule ne peut avoir de valeur calculée que si cette valeur était enregistrée dans le classeur : l'application ne recalcule pas Excel.

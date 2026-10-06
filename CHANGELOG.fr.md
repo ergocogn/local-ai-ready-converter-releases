@@ -2,6 +2,15 @@
 
 [Read in English](CHANGELOG.md) · [Accueil](README.fr.md)
 
+## 0.3.3 — conversion structurée des images (6 octobre 2026)
+
+- Ajout de blocs génériques ordonnés par page au JSON des images, sans supprimer le texte OCR ni les champs existants.
+- Reconnaissance prudente des titres, listes, paires libellé/valeur, contrôles sélectionnés et tableaux à grille visible, sans modèle propre à un type de document.
+- Utilisation des structures fiables en Markdown et TXT ; repli sur le texte OCR si la disposition est incertaine.
+- CSV reste indisponible pour les images ; les autres formats d'entrée conservent leurs sorties.
+
+L'OCR et le regroupement visuel restent approximatifs. Vérifiez les valeurs et relations importantes sur l'image originale.
+
 ## 0.3.2 — fiabilisation de l’arrêt (23 septembre 2026)
 
 - Arrêt immédiat d’une conversion active, y compris l’arbre des processus OCR externes.

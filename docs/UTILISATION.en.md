@@ -18,6 +18,8 @@ In **Settings**, choose a dated `Conversion-YYYY-MM-DD` folder beside the source
 
 OCR recognizes text in images and scanned PDFs. **Searchable PDF** makes a new PDF with a text layer and can be the only selected output. Choose recognition languages in Settings. Basic languages come with the Windows package; additional models can be imported or downloaded on request.
 
+For images, JSON keeps the OCR text and adds `pages[].blocks`: ordered blocks with a role, text, position, and any clearly detected child elements or visual states. Markdown and TXT use reliable structure. Clearly ruled tables may be reconstructed in JSON and Markdown; CSV is not offered for images. Uncertain layouts fall back to simple text.
+
 ## Choosing an output for AI
 
 For a PDF, TXT is often lighter; JSON also retains page separation. For a tabular Excel workbook, one CSV per sheet is often more compact than detailed JSON. The JSON preserves more structure and formulas. A calculated value can be included only when the workbook stored it; the app does not recalculate Excel.

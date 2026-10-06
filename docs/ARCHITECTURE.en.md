@@ -2,7 +2,9 @@
 
 [Lire en français](ARCHITECTURE.md) · [Home](../README.md)
 
-Today the app reads files on the user's computer, selects a converter by input type and writes outputs to the chosen destination. Originals are not modified. The Windows package bundles the tools it needs. The engine is mostly Python and can be reused on other platforms, but the current window and installer are Windows-specific.
+Today the app reads files on the user's computer, selects a converter by input type and writes outputs to the chosen destination. Originals are not modified. The Windows and Linux packages bundle their conversion tools.
+
+For images, Tesseract supplies text and word positions in one pass. The converter builds generic visual blocks, using Pillow for clearly visible controls and ruled tables. JSON retains its earlier fields and adds `pages[].blocks`; Markdown and TXT use these blocks with a text fallback. CSV remains limited to the tabular inputs already supported.
 
 ```mermaid
 flowchart LR
@@ -21,4 +23,4 @@ flowchart LR
     class F,G,H future
 ```
 
-Solid arrows are in the current product; dotted arrows are intended future work. Today's result folder is **not yet** a standardized AI-ready data format. No MCP server, semantic index or RAG is delivered in 0.3.1. See the [roadmap](ROADMAP.en.md) for order and status.
+Solid arrows are in the current product; dotted arrows are intended future work. Today's result folder is **not yet** a standardized AI-ready data format. No MCP server, semantic index or RAG is delivered in 0.3.3. See the [roadmap](ROADMAP.en.md) for order and status.

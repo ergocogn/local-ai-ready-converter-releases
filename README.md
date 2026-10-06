@@ -10,11 +10,11 @@
 
 <p align="center">
   <a href="../../releases"><img src="docs/assets/windows-releases.svg" alt="Windows 11 x64 releases"></a>
-  <a href="../../releases"><img src="https://img.shields.io/badge/Linux-0.3.2-18181b?style=for-the-badge&amp;logo=linux&amp;logoColor=white" alt="Linux 0.3.2 AppImage"></a>
+  <a href="../../releases"><img src="https://img.shields.io/badge/Linux-0.3.3-18181b?style=for-the-badge&amp;logo=linux&amp;logoColor=white" alt="Linux 0.3.3 AppImage"></a>
   <img src="https://img.shields.io/badge/macOS-Planned-d4d4d8?style=for-the-badge&amp;logo=apple&amp;logoColor=18181b" alt="macOS planned; no download yet">
 </p>
 
-> **Version 0.3.2 is available for Windows 11 x64 and Linux x86_64.** It includes immediate cancellation and safer handling of online-only cloud files. Download the native package from [Releases](../../releases). This repository contains distribution material, not the proprietary development source. macOS remains planned, with no announced order of passage.
+> **Version 0.3.3 is available for Windows 11 x64 and Linux x86_64.** Image conversion now retains more visible document structure in JSON, Markdown and TXT. Download the native package from [Releases](../../releases). This repository contains distribution material, not the proprietary development source. macOS remains planned, with no announced order of passage.
 
 ## A file you can read is not always a file you can reuse
 
@@ -77,7 +77,7 @@ The app can put outputs beside the source, in a dated conversion folder, or in a
 | DOCX | TXT, Markdown, JSON |
 | XLSX | JSON, one CSV per sheet |
 | CSV | JSON |
-| PNG, JPEG, TIFF | TXT, Markdown, JSON via OCR |
+| PNG, JPEG, TIFF | TXT, Markdown, JSON via OCR; JSON includes ordered page blocks when the visual structure is clear |
 
 TXT suits straightforward text reuse. Markdown can preserve useful lightweight document structure. CSV is often the most economical view of a table. JSON is convenient when a program needs explicit structure, metadata or page boundaries; it can also be more verbose than CSV, especially for spreadsheets. **No format saves tokens automatically.** Choose the output for the next task. See the [usage guide](docs/UTILISATION.en.md) and [architecture](docs/ARCHITECTURE.en.md).
 

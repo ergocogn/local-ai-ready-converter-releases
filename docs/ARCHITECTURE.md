@@ -2,7 +2,9 @@
 
 [Read in English](ARCHITECTURE.en.md) · [Accueil](../README.fr.md)
 
-Aujourd'hui, l'application lit les fichiers sur le poste, choisit un convertisseur selon le format et écrit les sorties à la destination choisie. Les originaux ne sont pas modifiés. Les outils nécessaires sont intégrés au paquet Windows.
+Aujourd'hui, l'application lit les fichiers sur le poste, choisit un convertisseur selon le format et écrit les sorties à la destination choisie. Les originaux ne sont pas modifiés. Les outils nécessaires sont intégrés aux paquets Windows et Linux.
+
+Pour les images, Tesseract fournit en une passe le texte et les positions des mots. Le convertisseur reconstruit des blocs visuels génériques avec Pillow pour les contrôles et tableaux clairement visibles. Le JSON garde ses anciens champs et ajoute `pages[].blocks` ; Markdown et TXT utilisent ces blocs avec un repli textuel. CSV reste réservé aux entrées tabulaires déjà prises en charge.
 
 ```mermaid
 flowchart LR
@@ -21,4 +23,4 @@ flowchart LR
     class F,G,H futur
 ```
 
-Les flèches pleines représentent le produit actuel ; les flèches pointillées sont des évolutions envisagées. Le dossier de résultats d'aujourd'hui n'est **pas encore** un format AI-ready standardisé. Aucun serveur MCP, index sémantique ou RAG n'est livré dans la 0.3.1.
+Les flèches pleines représentent le produit actuel ; les flèches pointillées sont des évolutions envisagées. Le dossier de résultats d'aujourd'hui n'est **pas encore** un format AI-ready standardisé. Aucun serveur MCP, index sémantique ou RAG n'est livré dans la 0.3.3.

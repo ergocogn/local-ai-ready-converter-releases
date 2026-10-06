@@ -10,11 +10,11 @@
 
 <p align="center">
   <a href="../../releases"><img src="docs/assets/windows-releases.svg" alt="Releases Windows 11 x64"></a>
-  <a href="../../releases"><img src="https://img.shields.io/badge/Linux-0.3.2-18181b?style=for-the-badge&amp;logo=linux&amp;logoColor=white" alt="Linux 0.3.2 AppImage"></a>
+  <a href="../../releases"><img src="https://img.shields.io/badge/Linux-0.3.3-18181b?style=for-the-badge&amp;logo=linux&amp;logoColor=white" alt="Linux 0.3.3 AppImage"></a>
   <img src="https://img.shields.io/badge/macOS-Pr%C3%A9vu-d4d4d8?style=for-the-badge&amp;logo=apple&amp;logoColor=18181b" alt="macOS prévu ; aucun téléchargement pour le moment">
 </p>
 
-> **La version 0.3.2 est disponible pour Windows 11 x64 et Linux x86_64.** Elle comprend l’arrêt immédiat et une gestion plus sûre des fichiers cloud disponibles uniquement en ligne. Téléchargez le paquet natif dans les [Releases](../../releases). Ce dépôt contient la distribution, pas le code source propriétaire de développement. macOS reste prévu, sans ordre de passage annoncé.
+> **La version 0.3.3 est disponible pour Windows 11 x64 et Linux x86_64.** La conversion d'images conserve davantage de structure visible en JSON, Markdown et TXT. Téléchargez le paquet natif dans les [Releases](../../releases). Ce dépôt contient la distribution, pas le code source propriétaire de développement. macOS reste prévu, sans ordre de passage annoncé.
 
 ## Un fichier lisible n'est pas toujours facile à réutiliser
 
@@ -77,7 +77,7 @@ L'application peut placer les sorties à côté de la source, dans un dossier de
 | DOCX | TXT, Markdown, JSON |
 | XLSX | JSON, un CSV par feuille |
 | CSV | JSON |
-| PNG, JPEG, TIFF | TXT, Markdown, JSON par OCR |
+| PNG, JPEG, TIFF | TXT, Markdown, JSON par OCR ; JSON contient des blocs ordonnés par page lorsque la structure visuelle est claire |
 
 TXT convient pour reprendre simplement du texte. Markdown peut garder une structure légère utile. CSV représente souvent un tableau de façon plus compacte. JSON facilite les scripts qui ont besoin de structure explicite, de métadonnées ou des limites de pages ; il peut aussi être plus verbeux qu'un CSV, surtout pour un classeur. **Aucun format ne réduit automatiquement le nombre de tokens.** Choisissez selon la tâche suivante. Voir le [guide d'utilisation](docs/UTILISATION.md) et l'[architecture](docs/ARCHITECTURE.md).
 

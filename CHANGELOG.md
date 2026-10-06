@@ -2,6 +2,15 @@
 
 [Lire en français](CHANGELOG.fr.md) · [Home](README.md)
 
+## 0.3.3 — structured image conversion (6 October 2026)
+
+- Add ordered, generic page blocks to image JSON while retaining the existing OCR text and page fields.
+- Recover clear headings, lists, label/value pairs, selected controls and ruled tables without document-specific templates.
+- Use reliable structure in Markdown and TXT; fall back to plain OCR text when the layout is uncertain.
+- Keep image CSV unavailable and preserve other input formats and their outputs.
+
+OCR and visual grouping remain best effort. Verify important values and inferred relations against the image.
+
 ## 0.3.2 — cancellation reliability update (23 September 2026)
 
 - Stop an active conversion immediately, including its external OCR process tree.
