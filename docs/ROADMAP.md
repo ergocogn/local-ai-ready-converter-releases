@@ -7,7 +7,7 @@
 ```mermaid
 flowchart TB
   A["0.1–0.2<br/>moteur local · OCR · batch"] --> B["0.3.1 Windows<br/>interface · assistant · formats par fichier"]
-  B --> C["Validation Windows<br/>notices · Sandbox hors ligne · paquet exact"]
+  B --> C["Validation Windows 0.3.1<br/>conversions · installateur"]
   C --> D["Release Windows<br/>setup · notices · empreintes"]
   D --> U["Mise à jour Windows réelle<br/>détection GitHub · téléchargement vérifié · mise à niveau"]
 
@@ -32,7 +32,7 @@ flowchart TB
 | Étape | État réel | Pour la considérer terminée |
 | --- | --- | --- |
 | **0.1–0.2 — fondation** | Moteur de conversion, OCR, batch, interface et premiers choix de destination réalisés en développement. | Jalon historique, pas une offre publique actuelle. |
-| **0.3 / 0.3.1 — Windows** | Interface, assistant, formats par fichier, historique de session, liens configurables. Tests automatisés et conversions de démonstration exécutés. | Le setup a été installé, testé avec conversions/OCR et désinstallé dans Windows Sandbox hors ligne. |
+| **0.3 / 0.3.1 — Windows** | Interface, assistant, formats par fichier, historique de session, liens configurables. | Première version Windows publiée avec installateur et conversions/OCR vérifiées. |
 | **Première Release Windows** | 0.3.1 dans le dépôt de distribution séparé, sans code propriétaire. | Installer, notes bilingues, notices et sources tierces, empreinte de contrôle. Le dépôt de développement reste privé. |
 | **Vérification des mises à jour** | Windows a réalisé une vraie mise à niveau de 0.3.1 vers 0.3.2. Sous Linux, la détection, le contrôle du téléchargement et les cas d'erreur sont couverts par les tests automatisés. | Le mécanisme est livré. Les AppImages 0.3.2 et 0.3.3 sont disponibles pour un essai réel de mise à niveau Linux, encore à effectuer. |
 | **Linux 0.3.2–0.3.3** | AppImages x86_64 natives publiées. Conversions, OCR, PDF recherchable et fenêtre PySide6/Qt validés sur Ubuntu Desktop 24.04 ; le paquet 0.3.3 a passé ses vérifications directes et son test d'interface. | Paquets, empreintes et instructions bilingues publiés. L'essai réel de mise à jour entre les deux versions reste à effectuer. |

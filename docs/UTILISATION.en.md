@@ -16,7 +16,7 @@ In **Settings**, choose a dated `Conversion-YYYY-MM-DD` folder beside the source
 
 ## OCR
 
-OCR recognizes text in images and scanned PDFs. **Searchable PDF** makes a new PDF with a text layer and can be the only selected output. Choose recognition languages in Settings. Basic languages come with the Windows package; additional models can be imported or downloaded on request.
+OCR recognizes text in images and scanned PDFs. **Searchable PDF** makes a new PDF with a text layer and can be the only selected output. Choose recognition languages in Settings. Basic languages come with the Windows and Linux packages; additional models can be imported or downloaded on request.
 
 For images, JSON keeps the OCR text and adds `pages[].blocks`: ordered blocks with a role, text, position, and any clearly detected child elements or visual states. Markdown and TXT use reliable structure. Clearly ruled tables may be reconstructed in JSON and Markdown; CSV is not offered for images. Uncertain layouts fall back to simple text.
 

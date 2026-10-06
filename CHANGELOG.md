@@ -11,6 +11,8 @@
 
 OCR and visual grouping remain best effort. Verify important values and inferred relations against the image.
 
+**Image JSON is the main improvement:** `pages[].blocks` represents elements in reading order, with generic types, nested elements, label/value associations and visual states when detected with sufficient confidence. Existing OCR fields `text` and `pages[].text` remain available. This JSON describes the visible structure of each image; it is not yet a library-wide AI-ready manifest.
+
 ## 0.3.2 — cancellation reliability update (23 September 2026)
 
 - Stop an active conversion immediately, including its external OCR process tree.
@@ -22,7 +24,7 @@ OCR and visual grouping remain best effort. Verify important values and inferred
 - Bundle Python, Tesseract, OCR languages and a signed static AppImage runtime; no separate Python, Tesseract or `libfuse2` installation is required.
 - Validate the AppImage directly on a clean Ubuntu Desktop 24.04 VM: startup, DOCX/PDF/CSV/XLSX/image/TIFF conversion, multilingual OCR and searchable PDF.
 
-This is the recommended Windows and Linux release. On Windows, close version 0.3.1 and run `LocalAIReadyConverter-0.3.2-Setup.exe`; uninstalling first is not required. On Linux x86_64, download the AppImage, allow it to run as a program in file properties, then double-click it.
+To install 0.3.2 on Windows from 0.3.1, users could close the app and run `LocalAIReadyConverter-0.3.2-Setup.exe` without uninstalling first. On Linux x86_64, the AppImage needed permission to run as a program in file properties.
 
 ## 0.3.1 — first Windows release (23 September 2026)
 

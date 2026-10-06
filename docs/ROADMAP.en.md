@@ -7,7 +7,7 @@
 ```mermaid
 flowchart TB
   A["0.1–0.2<br/>local engine · OCR · batch"] --> B["0.3.1 Windows<br/>UI · walkthrough · per-file formats"]
-  B --> C["Windows validation<br/>notices · offline Sandbox · exact package"]
+  B --> C["Windows 0.3.1 validation<br/>conversions · installer"]
   C --> D["Windows Release<br/>setup · notices · checksums"]
   D --> U["Windows live update<br/>GitHub detection · verified download · upgrade"]
 
@@ -32,7 +32,7 @@ flowchart TB
 | Stage | Actual status | Completion criterion |
 | --- | --- | --- |
 | **0.1–0.2 — foundation** | Conversion engine, OCR, batch handling, interface and initial destinations developed. | Historical milestones, not a current public offering. |
-| **0.3 / 0.3.1 — Windows** | UI, walkthrough, per-file formats, session results and configurable links. Automated tests and demo conversions run. | Setup was installed, tested with conversion/OCR and uninstalled in an offline Windows Sandbox. |
+| **0.3 / 0.3.1 — Windows** | UI, walkthrough, per-file formats, session results and configurable links. | First Windows version published with installer and verified conversion/OCR. |
 | **First Windows Release** | 0.3.1 in a separate distribution repository, without proprietary source. | Installer, bilingual notes, third-party notices and sources, checksum. The development repository remains private. |
 | **Update verification** | Windows completed a real upgrade from 0.3.1 to 0.3.2. On Linux, detection, download verification and error cases are covered by automated tests. | The mechanism is delivered. AppImages 0.3.2 and 0.3.3 are available for a live Linux upgrade test, which remains pending. |
 | **Linux 0.3.2–0.3.3** | Native x86_64 AppImages are published. Conversions, OCR, searchable PDF and the PySide6/Qt window passed on Ubuntu Desktop 24.04; the 0.3.3 package passed direct package and UI checks. | Packages, checksums and bilingual instructions are published. A live update between the two versions remains to be tested. |

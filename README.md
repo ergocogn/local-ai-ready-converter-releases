@@ -22,7 +22,7 @@ A PDF invoice, a scanned letter, a Word report and an Excel workbook were made p
 
 In practical terms, this is a **local document converter for PDF OCR, PDF to text/Markdown/JSON, DOCX to Markdown, XLSX to CSV/JSON, and image OCR**. It brings these jobs together in one graphical batch workflow.
 
-No Python or Tesseract installation is required separately for the intended Windows package. You do not need an account or a command line to use the application. Conversion runs on your computer; document contents are not sent to an ergoCogn conversion service.
+The Windows and Linux packages include Python and Tesseract; no separate installation is required. You do not need an account or a command line to use the application. Conversion runs on your computer; document contents are not sent to an ergoCogn conversion service.
 
 ## See it in action
 
@@ -79,6 +79,8 @@ The app can put outputs beside the source, in a dated conversion folder, or in a
 | CSV | JSON |
 | PNG, JPEG, TIFF | TXT, Markdown, JSON via OCR; JSON includes ordered page blocks when the visual structure is clear |
 
+**New in 0.3.3: more useful image JSON.** Alongside OCR text, `pages[].blocks` can distinguish headings, paragraphs, lists, label/value fields, selected controls and visibly ruled tables. Blocks keep reading order and may contain child elements; a visual state is recorded only when sufficiently reliable. The converter falls back to plain OCR text when it cannot determine the structure. CSV is not offered for images.
+
 TXT suits straightforward text reuse. Markdown can preserve useful lightweight document structure. CSV is often the most economical view of a table. JSON is convenient when a program needs explicit structure, metadata or page boundaries; it can also be more verbose than CSV, especially for spreadsheets. **No format saves tokens automatically.** Choose the output for the next task. See the [usage guide](docs/UTILISATION.en.md) and [architecture](docs/ARCHITECTURE.en.md).
 
 Automatic conversion is not infallible. OCR, complex tables, formulas and unusual PDF layouts can introduce omissions or errors. For important figures or decisions, check the result against the original.
@@ -107,6 +109,6 @@ This is a working principle, **not a promise of a measured token or energy savin
 
 Use this repository's [Issues](../../issues) to report a problem; please never attach confidential documents. You can [give the project a GitHub star](../../), which is free. Financial support is optional through [Stripe](https://buy.stripe.com/8x214pgIZ7ho3vUftg1oI00) and is **not** needed to use the free application. Other payment buttons are hidden until their URLs are configured. The in-app support area can be hidden in Settings. See [support and announcements](docs/SOUTIEN.en.md).
 
-Local AI-Ready Converter is published by **ergoCogn sàrl**. This repository is for binary distribution, documentation, release notes and issue tracking; it does not publish the proprietary source. Read the [French reference licence](LICENSE.fr.md), its [English translation](LICENSE.en.md) and the [third-party component notices](docs/COMPOSANTS_TIERS.en.md). The Windows setup was tested offline in a clean Windows Sandbox.
+Local AI-Ready Converter is published by **ergoCogn sàrl**. This repository is for binary distribution, documentation, release notes and issue tracking; it does not publish the proprietary source. Read the [French reference licence](LICENSE.fr.md), its [English translation](LICENSE.en.md) and the [third-party component notices](docs/COMPOSANTS_TIERS.en.md).
 
 <p align="center"><strong>Convert once. Reuse where it helps.</strong><br>🍃 Save tokens. Save energy. Use AI cleverly.</p>

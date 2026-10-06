@@ -22,7 +22,7 @@ Une facture PDF, une lettre numérisée, un rapport Word ou un classeur Excel on
 
 Concrètement, c'est un **convertisseur local de documents : OCR des PDF et des images, PDF vers texte/Markdown/JSON, DOCX vers Markdown, XLSX vers CSV/JSON**. L'application rassemble ces opérations dans un parcours graphique de conversion par lot.
 
-Le paquet Windows visé n'exige pas l'installation séparée de Python ou Tesseract. Pas besoin de compte ni de ligne de commande pour utiliser l'application. La conversion se fait sur votre ordinateur ; le contenu des documents n'est pas envoyé à un service de conversion ergoCogn.
+Les paquets Windows et Linux incluent Python et Tesseract ; aucune installation séparée n'est nécessaire. Pas besoin de compte ni de ligne de commande pour utiliser l'application. La conversion se fait sur votre ordinateur ; le contenu des documents n'est pas envoyé à un service de conversion ergoCogn.
 
 ## Découvrez l'interface
 
@@ -79,6 +79,8 @@ L'application peut placer les sorties à côté de la source, dans un dossier de
 | CSV | JSON |
 | PNG, JPEG, TIFF | TXT, Markdown, JSON par OCR ; JSON contient des blocs ordonnés par page lorsque la structure visuelle est claire |
 
+**Nouveau en 0.3.3 : un JSON d'image plus exploitable.** En plus du texte OCR, `pages[].blocks` peut distinguer titres, paragraphes, listes, champs libellé/valeur, éléments cochés et tableaux à grille visible. Les blocs gardent l'ordre de lecture et peuvent contenir des éléments enfants ; un état visuel n'est indiqué que lorsqu'il est suffisamment fiable. Le convertisseur revient au texte OCR simple si la structure ne peut pas être déterminée. CSV n'est pas proposé pour les images.
+
 TXT convient pour reprendre simplement du texte. Markdown peut garder une structure légère utile. CSV représente souvent un tableau de façon plus compacte. JSON facilite les scripts qui ont besoin de structure explicite, de métadonnées ou des limites de pages ; il peut aussi être plus verbeux qu'un CSV, surtout pour un classeur. **Aucun format ne réduit automatiquement le nombre de tokens.** Choisissez selon la tâche suivante. Voir le [guide d'utilisation](docs/UTILISATION.md) et l'[architecture](docs/ARCHITECTURE.md).
 
 Une conversion automatique n'est pas infaillible. OCR, tableaux complexes, formules et mises en page PDF atypiques peuvent produire des omissions ou des erreurs. Vérifiez les chiffres et informations importants par rapport à l'original.
@@ -107,6 +109,6 @@ C'est un principe de travail, **pas la promesse d'une économie mesurée de toke
 
 Utilisez les [Issues](../../issues) de ce dépôt pour signaler un problème ; n'y joignez jamais de document confidentiel. Vous pouvez [donner une étoile GitHub au projet](../../) gratuitement. Le soutien financier est facultatif via [Stripe](https://buy.stripe.com/8x214pgIZ7ho3vUftg1oI00) et n'est **pas** nécessaire pour utiliser l'application gratuite. Les autres boutons de paiement restent masqués tant que leurs URL ne sont pas configurées. L'espace de soutien dans l'application peut être masqué dans les Paramètres. Voir la [page soutien et annonces](docs/SOUTIEN.md).
 
-Local AI-Ready Converter est édité par **ergoCogn sàrl**. Ce dépôt sert à la distribution des exécutables, à la documentation, aux notes de version et au suivi des problèmes ; il ne publie pas le code source propriétaire. Voir la [licence française du produit](LICENSE.fr.md), sa [traduction anglaise](LICENSE.en.md) et les [notices des composants tiers](docs/COMPOSANTS_TIERS.md). Le setup Windows a été testé hors ligne dans un Windows Sandbox propre.
+Local AI-Ready Converter est édité par **ergoCogn sàrl**. Ce dépôt sert à la distribution des exécutables, à la documentation, aux notes de version et au suivi des problèmes ; il ne publie pas le code source propriétaire. Voir la [licence française du produit](LICENSE.fr.md), sa [traduction anglaise](LICENSE.en.md) et les [notices des composants tiers](docs/COMPOSANTS_TIERS.md).
 
 <p align="center"><strong>Convertir une fois. Réutiliser quand c'est utile.</strong><br>🍃 Save tokens. Save energy. Use AI cleverly.</p>
