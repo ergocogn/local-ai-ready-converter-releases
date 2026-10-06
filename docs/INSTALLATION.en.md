@@ -10,7 +10,11 @@
 
 Do not download a `.incomplete` or `.part` file. The setup includes the conversion tools and base OCR languages; you do not need to install Python or Tesseract separately. No command line is needed.
 
-**Smart App Control compatibility:** the Windows 0.3.3 setup is unsigned. Windows installations enforcing this protection may refuse to open it before installation starts. The same restriction applies to the unsigned 0.3.2 setup. A signed version is needed for these configurations; if you encounter this block, [report it](../../../issues) with the exact Windows message.
+If Windows displays a warning before installation, first check that the file came from our [Releases](../../../releases):
+
+- If you see **“Windows protected your PC”**, select **More info**, then **Run anyway** if that button is offered.
+- If the downloaded file has an **Unblock** option under **right-click → Properties → General**, select it, click **Apply**, then try again.
+- If Windows says **“An app control policy has blocked this file”** without an option to continue, the steps above will not remove that block. [Report the exact message](../../../issues).
 
 To update, close the app and run the newer setup. **Do not uninstall the old version first**: setup upgrades it. User preferences are kept, and the installer does not manage your documents. To uninstall, use **Windows Settings → Installed apps → Local AI-Ready Converter → Uninstall**.
 
