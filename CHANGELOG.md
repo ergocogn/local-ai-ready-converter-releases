@@ -34,6 +34,6 @@ To install 0.3.2 on Windows from 0.3.1, users could close the app and run `Local
 - Searchable PDF selectable as an output; Windows-1252 CSV input supported.
 - Manual GitHub update check and installer download with size and SHA-256 verification.
 - Optional Stripe support link and French/English GitHub star and Stripe labels.
-- Self-contained Windows 11 x64 setup with bundled conversion tools, OCR and third-party notices/sources. Tested offline in a clean Windows Sandbox: installation, conversions/OCR, WebView2 startup and uninstallation.
+- Self-contained Windows 11 x64 setup with bundled conversion tools, OCR and third-party notices/sources. Installation, conversion/OCR, interface startup and uninstallation were checked offline.
 
 Download `LocalAIReadyConverter-0.3.1-Setup.exe` from [Releases](../../releases) and verify its checksum in [SHA256SUMS.txt](SHA256SUMS.txt). Do not uninstall an older version first; close the app and run the new setup.
