@@ -9,7 +9,7 @@
 - Use reliable structure in Markdown and TXT; fall back to plain OCR text when the layout is uncertain.
 - Keep image CSV unavailable and preserve other input formats and their outputs.
 
-**0.3.3 package refresh — 6 October 2026:** the Windows installer was rebuilt without changing the version number. This revision more carefully recovers the beginning of light text on dark backgrounds, prevents technical TSV rows from leaking into outputs, attaches interleaved annotations to visual items, and adds generic `selected` and `highlighted` JSON observations while retaining the existing `state` field. Markdown keeps its existing rendering and TXT gains more stable spacing and indentation. The Linux AppImage published under the same version is not replaced by this Windows-only refresh.
+**0.3.3 package refresh — 6 October 2026:** the Windows installer and Linux AppImage were rebuilt without changing the version number. This revision more carefully recovers the beginning of light text on dark backgrounds, prevents technical TSV rows from leaking into outputs, attaches interleaved annotations to visual items, and adds generic `selected` and `highlighted` JSON observations while retaining the existing `state` field. Markdown keeps its existing rendering and TXT gains more stable spacing and indentation.
 
 OCR and visual grouping remain best effort. Verify important values and inferred relations against the image.
 
