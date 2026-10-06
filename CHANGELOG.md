@@ -13,6 +13,8 @@ OCR and visual grouping remain best effort. Verify important values and inferred
 
 **Image JSON is the main improvement:** `pages[].blocks` represents elements in reading order, with generic types, nested elements, label/value associations and visual states when detected with sufficient confidence. Existing OCR fields `text` and `pages[].text` remain available. This JSON describes the visible structure of each image; it is not yet a library-wide AI-ready manifest.
 
+**Windows compatibility:** the 0.3.3 installer is unsigned. Windows with Smart App Control enforcing signed code may block it before installation starts. The same applies to the unsigned 0.3.2 installer. See the [installation guide](docs/INSTALLATION.en.md).
+
 ## 0.3.2 — cancellation reliability update (23 September 2026)
 
 - Stop an active conversion immediately, including its external OCR process tree.

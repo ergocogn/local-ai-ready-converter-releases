@@ -13,6 +13,8 @@ L'OCR et le regroupement visuel restent approximatifs. Vérifiez les valeurs et 
 
 Le **JSON des images est la principale amélioration** : `pages[].blocks` représente les éléments dans l'ordre de lecture, avec des types génériques, des éléments imbriqués, des associations libellé/valeur et des états visuels lorsqu'ils sont détectés avec suffisamment de confiance. Les champs OCR `text` et `pages[].text` restent disponibles. Ce JSON décrit la structure visible de chaque image ; il ne constitue pas encore un manifest AI-ready pour toute la bibliothèque de documents.
 
+**Compatibilité Windows :** l'installateur 0.3.3 n'est pas signé. Un Windows appliquant Smart App Control peut le bloquer avant le début de l'installation. La même restriction concerne l'installateur 0.3.2 non signé. Voir le [guide d'installation](docs/INSTALLATION.md).
+
 ## 0.3.2 — fiabilisation de l’arrêt (23 septembre 2026)
 
 - Arrêt immédiat d’une conversion active, y compris l’arbre des processus OCR externes.

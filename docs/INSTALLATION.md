@@ -10,6 +10,8 @@
 
 Ne téléchargez pas un fichier portant `.incomplete` ou `.part`. Le setup contient les outils de conversion et les langues OCR de base : pas besoin d'installer séparément Python ou Tesseract. Aucune ligne de commande n'est nécessaire.
 
+**Compatibilité Smart App Control :** le setup Windows 0.3.3 n'est pas signé. Sur un Windows qui impose cette protection, le système peut refuser de l'ouvrir avant même l'installation. La même restriction concerne le setup 0.3.2 non signé. Une version signée sera nécessaire pour ces configurations ; si vous rencontrez ce blocage, [signalez-le](../../../issues) avec le message Windows exact.
+
 Pour une mise à jour, fermez l'application et lancez le nouveau setup. **Ne désinstallez pas l'ancienne version** : le setup la met à niveau. Les préférences sont conservées et l'installateur ne gère pas vos documents. Pour désinstaller, utilisez **Paramètres Windows → Applications installées → Local AI-Ready Converter → Désinstaller**.
 
 ## Linux x86_64

@@ -12,7 +12,8 @@ flowchart TB
   D --> U["Windows live update<br/>GitHub detection · verified download · upgrade"]
 
   D --> L["Linux 0.3.2<br/>native tools · AppImage · clean-VM tests"] --> S["Images 0.3.3<br/>logical structure · JSON/Markdown/TXT"]
-  S --> UL["Linux 0.3.2 → 0.3.3 update<br/>live test pending"]
+  S --> UL["Linux 0.3.2 → 0.3.3 update<br/>download and package verified"]
+  S --> W["Smart App Control compatibility<br/>Windows signing needed"]
   L --> M["macOS<br/>native tools · build · tests"]
   S --> Q["Output quality<br/>PDF/tables · errors · possible auto choice"]
   Q --> F["AI-ready folder<br/>ID · manifest · metadata · assets"]
@@ -23,7 +24,7 @@ flowchart TB
   classDef active fill:#fff4dd,stroke:#a56b00,color:#553600
   classDef future fill:#f6f6f6,stroke:#666,color:#222
   class A,B,C,D,U,L,S done
-  class UL active
+  class UL,W active
   class M,Q,F,P,K,R future
 ```
 
@@ -34,9 +35,10 @@ flowchart TB
 | **0.1–0.2 — foundation** | Conversion engine, OCR, batch handling, interface and initial destinations developed. | Historical milestones, not a current public offering. |
 | **0.3 / 0.3.1 — Windows** | UI, walkthrough, per-file formats, session results and configurable links. | First Windows version published with installer and verified conversion/OCR. |
 | **First Windows Release** | 0.3.1 in a separate distribution repository, without proprietary source. | Installer, bilingual notes, third-party notices and sources, checksum. The development repository remains private. |
-| **Update verification** | Windows completed a real upgrade from 0.3.1 to 0.3.2. On Linux, detection, download verification and error cases are covered by automated tests. | The mechanism is delivered. AppImages 0.3.2 and 0.3.3 are available for a live Linux upgrade test, which remains pending. |
-| **Linux 0.3.2–0.3.3** | Native x86_64 AppImages are published. Conversions, OCR, searchable PDF and the PySide6/Qt window passed on Ubuntu Desktop 24.04; the 0.3.3 package passed direct package and UI checks. | Packages, checksums and bilingual instructions are published. A live update between the two versions remains to be tested. |
+| **Update verification** | Windows completed upgrades from 0.3.1 to 0.3.2 and from 0.3.2 to 0.3.3. On Linux, the 0.3.2 updater code detected and downloaded the public 0.3.3 release with checksum verification; the downloaded package launched and passed diagnostics. | The mechanism is delivered. The complete Linux graphical update flow still needs verification. |
+| **Linux 0.3.2–0.3.3** | Native x86_64 AppImages are published. Conversions, OCR, searchable PDF and the PySide6/Qt window passed on Ubuntu Desktop 24.04; the downloaded 0.3.3 package passed package and UI checks. | Packages, checksums and bilingual instructions are published. |
 | **Images 0.3.3 — logical structure** | Generic ordered JSON blocks represent clear headings, lists, label/value associations, selected controls and ruled tables; Markdown and TXT also use the structure. Plain OCR remains the fallback when the structure is uncertain. | Shipped for Windows and Linux. CSV keeps its existing behavior: no artificial table is created for a non-tabular image. |
+| **Windows Smart App Control compatibility** | The public 0.3.2 and 0.3.3 setups are unsigned and may be blocked by this protection before launch. The 0.3.3 setup passed an upgrade and a fresh install on Windows where it was allowed to run. | Obtain a valid code signature, sign the Windows package and validate the final setup on a system enforcing this protection before claiming compatibility. |
 | **macOS** | No macOS package validated. Planned, with no announced order of passage. | Build on macOS with compatible tools; handle signing/notarization if required for the chosen distribution route; test UI and conversion/OCR on a clean machine. Verify its update route. |
 | **Quality / possible 0.4 cycle** | Intended, not promised for the first Release. | Better errors, complex tables/PDFs and compact tabular JSON; define any automatic-output mode explicitly, then test its rules. |
 | **AI-ready structure** | Not implemented yet. | Stable folder, document ID, versioned JSON manifest, provenance, produced files, OCR/language, source format and organized assets. |

@@ -12,7 +12,8 @@ flowchart TB
   D --> U["Mise à jour Windows réelle<br/>détection GitHub · téléchargement vérifié · mise à niveau"]
 
   D --> L["Linux 0.3.2<br/>outils natifs · AppImage · tests VM propre"] --> S["Images 0.3.3<br/>structure logique · JSON/Markdown/TXT"]
-  S --> UL["Mise à jour Linux 0.3.2 → 0.3.3<br/>essai réel à effectuer"]
+  S --> UL["Mise à jour Linux 0.3.2 → 0.3.3<br/>téléchargement et paquet vérifiés"]
+  S --> W["Compatibilité Smart App Control<br/>signature Windows requise"]
   L --> M["macOS<br/>outils natifs · build · tests"]
   S --> Q["Qualité des sorties<br/>PDF/tableaux · erreurs · choix automatique éventuel"]
   Q --> F["Dossier AI-ready<br/>ID · manifest · métadonnées · assets"]
@@ -23,7 +24,7 @@ flowchart TB
   classDef enCours fill:#fff4dd,stroke:#a56b00,color:#553600
   classDef futur fill:#f6f6f6,stroke:#666,color:#222
   class A,B,C,D,U,L,S fait
-  class UL enCours
+  class UL,W enCours
   class M,Q,F,P,K,R futur
 ```
 
@@ -34,9 +35,10 @@ flowchart TB
 | **0.1–0.2 — fondation** | Moteur de conversion, OCR, batch, interface et premiers choix de destination réalisés en développement. | Jalon historique, pas une offre publique actuelle. |
 | **0.3 / 0.3.1 — Windows** | Interface, assistant, formats par fichier, historique de session, liens configurables. | Première version Windows publiée avec installateur et conversions/OCR vérifiées. |
 | **Première Release Windows** | 0.3.1 dans le dépôt de distribution séparé, sans code propriétaire. | Installer, notes bilingues, notices et sources tierces, empreinte de contrôle. Le dépôt de développement reste privé. |
-| **Vérification des mises à jour** | Windows a réalisé une vraie mise à niveau de 0.3.1 vers 0.3.2. Sous Linux, la détection, le contrôle du téléchargement et les cas d'erreur sont couverts par les tests automatisés. | Le mécanisme est livré. Les AppImages 0.3.2 et 0.3.3 sont disponibles pour un essai réel de mise à niveau Linux, encore à effectuer. |
-| **Linux 0.3.2–0.3.3** | AppImages x86_64 natives publiées. Conversions, OCR, PDF recherchable et fenêtre PySide6/Qt validés sur Ubuntu Desktop 24.04 ; le paquet 0.3.3 a passé ses vérifications directes et son test d'interface. | Paquets, empreintes et instructions bilingues publiés. L'essai réel de mise à jour entre les deux versions reste à effectuer. |
+| **Vérification des mises à jour** | Windows a réalisé des mises à niveau de 0.3.1 vers 0.3.2 et de 0.3.2 vers 0.3.3. Sous Linux, le code de 0.3.2 a détecté et téléchargé la Release 0.3.3 publique avec contrôle de l'empreinte ; le paquet téléchargé a démarré et passé ses diagnostics. | Le mécanisme est livré. Le parcours graphique complet de mise à jour Linux reste à vérifier. |
+| **Linux 0.3.2–0.3.3** | AppImages x86_64 natives publiées. Conversions, OCR, PDF recherchable et fenêtre PySide6/Qt validés sur Ubuntu Desktop 24.04 ; le paquet 0.3.3 téléchargé a passé les vérifications du paquet et de l'interface. | Paquets, empreintes et instructions bilingues publiés. |
 | **Images 0.3.3 — structure logique** | JSON générique en blocs ordonnés pour les titres, listes, associations libellé/valeur, contrôles sélectionnés et tableaux clairement délimités ; Markdown et TXT bénéficient de cette structure. Repli sur le texte OCR lorsque la structure est incertaine. | Livré pour Windows et Linux. CSV conserve son comportement existant : aucune structure tabulaire n'est inventée pour une image non tabulaire. |
+| **Compatibilité Windows Smart App Control** | Les setups publics 0.3.2 et 0.3.3 sont non signés et peuvent être bloqués par cette protection avant leur lancement. Le setup 0.3.3 a réussi une mise à niveau et une installation neuve sur un Windows qui l'autorise. | Obtenir une signature de code valide, signer le paquet Windows et valider le setup final sur un système appliquant cette protection avant d'annoncer cette compatibilité. |
 | **macOS** | Aucun paquet macOS validé. Prévu, sans ordre de passage annoncé. | Construire sur macOS avec outils compatibles, signature/notarisation si nécessaires au mode de distribution retenu, interface et conversions/OCR testées sur machine propre. Vérifier sa méthode de mise à jour. |
 | **Qualité / futur cycle 0.4** | Envisagé, non promis pour la première Release. | Mieux guider les erreurs, améliorer tableaux/PDF complexes et JSON tabulaire compact, expliciter un éventuel mode de choix automatique des sorties, puis tester chaque règle. |
 | **Structure AI-ready** | Pas encore implémentée. | Dossier stable, identifiant de document, manifest JSON versionné, provenance, sorties produites, OCR/langue, format source et organisation des assets. |
